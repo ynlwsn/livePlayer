@@ -1,0 +1,175 @@
+.audience {
+    position: absolute;
+    width   : 223px;
+    top     : 22px;
+    left    : 1616px;
+    height  : 914px;
+    .care {
+        width        : 100%;
+        height       : 259px;
+        margin-bottom: 10px;
+        .care_title {
+            width     : 222px;
+            height    : 37px;
+            background: rgba(14, 46, 79, 0.74);
+            padding   : 6px 12px;
+            h4 {
+                font-size  : 14px;
+                font-weight: 400;
+                color      : white;
+                float      : left;
+
+                span {
+                    color: #ff3399;
+                }
+            }
+
+            button {
+                color        : white;
+                float        : right;
+                width        : 56px;
+                height       : 26px;
+                background   : linear-gradient(283deg, rgba(204, 102, 204, 1) 0%, rgba(255, 204, 204, 1) 100%);
+                opacity      : 1;
+                border-radius: 13px;
+                font-size: 12px;
+            }
+        }
+
+        .sh_box {
+            height          : 222px;
+            padding         : 6px 14px;
+            background-color: #000;
+            overflow        : auto;
+            padding-left    : 0;
+        }
+
+        .care_zb {
+            color          : white;
+            display        : flex;
+            flex-wrap      : wrap;
+            justify-content: start;
+            align-content  : center;
+
+            li {
+                width        : 48px;
+                height       : 68px;
+                margin-left  : 18px;
+                margin-bottom: 12px;
+                text-align   : center;
+                position     : relative;
+
+                // 守护图标
+                i {
+                    width           : 42px;
+                    height          : 29px;
+                    display         : inline-block;
+                    background-image: url(../../assets/icon-jin.png);
+                    background-size : contain;
+                    position        : absolute;
+                    right           : -14px;
+                    bottom          : 18px;
+                }
+
+                    img {
+                        height: 47px;
+                        width : 47px;
+                    }
+            }
+        }
+    }
+
+    .sh_box::-webkit-scrollbar {
+        width : 6px;
+        /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px;
+    }
+
+    .sh_box::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius   : 10px;
+        // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background      : #ccc;
+    }
+
+    .sh_box::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background   : rgba(0, 0, 0, 0.83);
+    }
+
+    .audience_lists {
+        width     : 100%;
+        height    : 626px;
+        .gz_title {
+            color     : white;
+            height    : 41px;
+            text-align: center;
+            div {
+                float        : left;
+                cursor       : pointer;
+                width        : 111px;
+                height       : 41px;
+                border-radius: 2px;
+                background   : rgba(14, 46, 79, 1);
+                margin-top   : 4px;
+
+                h4 {
+                    font-size  : 14px;
+                    font-weight: 400;
+                }
+            }
+
+            .gz_active {
+                background-image: linear-gradient(326deg, rgba(204, 102, 204, 1) 0%, rgba(255, 204, 204, 1) 100%);
+            }
+        }
+
+        .gz_content {
+            color     : white;
+            height: 583px;
+            width     : 100%;
+            overflow-y: scroll;
+            background-color: rgba(0,0,0,0.8);
+            ul {
+                margin-top: 4px;
+                li {
+                    height : 60px;
+                    padding: 4px 12px;
+                   
+                }
+
+                p {
+                    height: 22px;
+                    img {
+                        vertical-align: middle;
+                        margin-right  : 4px;
+                        height: 16px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .gz_content::-webkit-scrollbar {
+            width : 6px;
+            /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+        }
+
+        .gz_content::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius   : 10px;
+            // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background      : #ccc;
+        }
+
+        .gz_content::-webkit-scrollbar-track {
+            /*滚动条里面轨道*/
+            // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background   : rgba(0, 0, 0, 0.83);
+        }
+    }
+}

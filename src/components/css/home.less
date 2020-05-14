@@ -1,0 +1,168 @@
+.home-page {
+    background-color: #eee;
+    padding-bottom  : 83px;
+    .recharge {
+        height          : 144px;
+        width           : 100%;
+        margin-top      : 56px;
+        margin-bottom   : 56px;
+        background-image: url(../../assets/icon-banner.png);
+        background-size: contain;
+    }
+
+    .liu_recommend {
+        margin-bottom: 56px;
+    }
+
+    .example {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : flex-start;
+
+        .hot,
+        .earn,
+        .contribute {
+            width: 467px;
+        }
+
+        .example_box {
+            height          : 400px;
+            padding-left    : 25px;
+            padding-bottom  : 25px;
+            width           : 100%;
+            background-color: #fff;
+            overflow-y      : auto;
+
+            .times {
+                height     : 30px;
+                line-height: 30px;
+                margin-top : 25px;
+
+                li {
+                    float       : left;
+                    font-size   : 16px;
+                    color       : #999;
+                    margin-right: 35px;
+                }
+            }
+
+            .hot,
+            .top3 {
+                width: 100%;
+                li {
+                    height       : 76px;
+                    margin-bottom: 20px;
+                    padding-right: 25px;
+                    margin-top   : 25px;
+
+                    img {
+                        height: 76px;
+                        width : 76px;
+                        float : left;
+                    }
+
+                    .num {
+                        float       : left;
+                        height      : 76px;
+                        line-height : 76px;
+                        margin-right: 10px;
+                    }
+
+                    .badge {
+                        position        : absolute;
+                        display         : block;
+                        height          : 31px;
+                        width           : 27px;
+                        left            : 60px;
+                        z-index         : 100;
+                        top             : -10px;
+                        background-image: url(../../assets/icon-hot-1.png);
+                        background-size : cover;
+                    }
+
+                    .top3-badge {
+                        left: 70px;
+                    }
+
+                    .uname {
+                        float      : left;
+                        height     : 76px;
+                        margin-top : 17px;
+                        margin-left: 16px;
+
+                        p {
+                            line-height: 22px;
+                        }
+                    }
+
+                    .attention {
+                        height          : 24px;
+                        width           : 66px;
+                        border-radius   : 12px;
+                        color           : rgba(153, 153, 153, 1);
+                        margin-top      : 26px;
+                        border          : 1px solid rgba(220, 220, 220, 1);
+                        background-color: #fff;
+                        float           : right;
+
+                        &:hover,
+                        &:focus {
+                            background-image: linear-gradient(to right, #FFCCCC, #CC66CC);
+                            border          : none;
+                            color           : white;
+                            outline         : none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .rank_box {
+            overflow: hidden;
+        }
+
+        .example_box::-webkit-scrollbar {
+            width : 10px;
+            /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+        }
+
+        .example_box::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius   : 10px;
+            // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background      : #ccc;
+        }
+
+        .example_box::-webkit-scrollbar-track {
+            /*滚动条里面轨道*/
+            // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background   : #fff;
+        }
+    }
+
+    .activity {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+
+        .active-view {
+            height: 460px;
+            width : 800px;
+
+            .el-carousel__item:nth-child(2n) {
+                background-color: #99a9bf;
+            }
+
+            .el-carousel__item:nth-child(2n+1) {
+                background-color: #d3dce6;
+            }
+        }
+
+        .news {
+            width : 428px;
+            height: 460px;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+<template>
+  <div class="top-nav">
+    <img src="../../assets/logo.png" alt class="logo" @click="back_home" />
+    <div class="container">
+      <ul class="nav_left">
+        <li>
+          <router-link to="/home">首页</router-link>
+        </li>
+        <li>
+          <router-link to="/live">直播</router-link>
+        </li>
+        <li>
+          <router-link to="/short-player">短视频</router-link>
+        </li>
+        <li>
+          <router-link to="/ranking">排行</router-link>
+        </li>
+        <li>
+          <router-link to="/down_load">下载</router-link>
+        </li>
+      </ul>
+      <div class="nav_right">
+        <div class="search-id">
+          <input type="text" placeholder="请输入用户名或用户ID" />
+          <i></i>
+        </div>
+        <div class="history" @mouseenter="isShowHistory" @mouseleave="hiddenHistory">
+          <i class="el-icon-time"></i>
+          <b>历史</b>
+          <div class="history_box" v-show="showHistory">
+            <i class="top-icon"></i>
+            <ul class="visited">
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt />
+                <div class="vname">
+                  <span>123</span>
+                  <i></i>
+                </div>
+                <div class="state">
+                  <span>直播中</span>
+                  <i></i>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt />
+                <div class="vname">
+                  <span>123</span>
+                  <i></i>
+                </div>
+                <div class="state">
+                  <span>直播中</span>
+                  <i></i>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt />
+                <div class="vname">
+                  <span>123</span>
+                  <i></i>
+                </div>
+                <div class="state">
+                  <span>直播中</span>
+                  <i></i>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <el-button class="register">注册</el-button>
+        <el-button class="login">登陆</el-button>
+        <img :src="mine" alt class="mine_img" @click="personalCenter"/>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      mine: require("../../assets/logo.png"),
+      input: "",
+      current: "0",
+      showHistory: false
+    };
+  },
+  methods: {
+    // 点击logo返回首页
+    back_home() {
+      this.$router.push("/");
+    },
+    isShowHistory() {
+      this.showHistory = true;
+    },
+    hiddenHistory() {
+      this.showHistory = false;
+    },
+    personalCenter(){
+      this.$router.push('/personal')
+    }
+  }
+};
+</script>
+<style scoped lang="less">
+@import '../css/top.less';
+</style>

@@ -1,0 +1,208 @@
+.top-nav {
+    width: 1920px;
+    height: 64px;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    .logo {
+      height: 44px;
+      width: 54px;
+      float: left;
+      margin-left: 144px;
+      margin-top: 11px;
+      cursor: pointer;
+    }
+    .container {
+      width: 1440px;
+      margin: 0 auto;
+      .nav_left {
+        float: left;
+        height: 64px;
+        line-height: 64px;
+        margin-left: 27px;
+        li {
+          float: left;
+          margin-left: 84px;
+          &:first-child {
+            margin: 0;
+          }
+  
+          a {
+            font-size: 16px;
+          }
+          .router-link-exact-active {
+            display: block;
+            height: 50px;
+            border-bottom: 2px solid #ff3399;
+            color: #ff3399 !important;
+            font-weight: 800;
+          }
+        }
+      }
+      .nav_right {
+        float: right;
+        height: 64px;
+        line-height: 64px;
+        .search-id,
+        .history,
+        .register,
+        .login,
+        .mine {
+          display: inline-block;
+        }
+        .search-id {
+          height: 38px;
+          input {
+            background-color: #eee;
+            display: inline-block;
+            height: 38px;
+            width: 258px;
+            border-radius: 20px;
+            outline: none;
+            padding-left: 20px;
+            border: none;
+          }
+          i {
+            height: 20px;
+            width: 23px;
+            cursor: pointer;
+            position: relative;
+            right: 40px;
+            top: 4px;
+            display: inline-block;
+            background-size: cover;
+            background-image: url("../../assets/icon-search.png");
+          }
+        }
+        .history {
+          margin-left: 42px;
+          margin-right: 21px;
+          font-size: 14px;
+          position: relative;
+          cursor: pointer;
+          &:hover {
+            color: #ff3399;
+          }
+          i {
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+          }
+          .history_box {
+          //   height: 322px;
+            width: 320px;
+            border-radius: 6px;
+            background-color: #fff;
+            position: absolute;
+            top: 60px;
+            left: -140px;
+            z-index: 100;
+            .top-icon {
+              position: absolute;
+              top: -9px;
+              height: 9px;
+              width: 320px;
+              display: inline-block;
+              background-image: url(../../assets/histroy/icon03.png);
+              background-size: cover;
+            }
+            //    历史访问
+            ul.visited {
+                border-radius: 8px;
+                border:1px solid #eee;
+              li {
+                height: 57px;
+                width: 100%;
+                &:hover{
+                    background-color: #ccc;
+                }
+                img,
+                .vname,
+                .state {
+                  float: left;
+                }
+                img {
+                  margin-top: 12px;
+                }
+                .vname {
+                  line-height: 25px;
+                  margin-right: 20px;
+                  margin-top:12px;
+                  span {
+                    display: block;
+                    height: auto;
+                    width: auto;
+                  }
+                  i {
+                    display: block;
+                    height: 14px;
+                    width: 28px;
+                    background-image: url(../../assets/histroy/icon-dengji.png);
+                    background-size: cover;
+                  }
+                }
+                .state {
+                  height: 57px;
+                  line-height: 86px;
+                  i {
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url(../../assets/histroy/online.png);
+                    background-size: cover;
+                  }
+                }
+                .follow {
+                  float: right;
+                  margin-right: 26px;
+                  margin-top: 18px;
+                  width: 47px;
+                  height: 22px;
+                  background: linear-gradient(
+                    282deg,
+                    rgba(204, 102, 204, 1) 0%,
+                    rgba(255, 204, 204, 1) 100%
+                  );
+                  border-radius: 6px;
+                  color: white;
+                  outline: none;
+                  border: none;
+                }
+                img {
+                  height: 36px;
+                  width: 36px;
+                }
+              }
+            }
+          }
+        }
+        //    登陆注册
+        .register,
+        .login {
+          color: #666;
+          border-radius: 4px;
+          font-size: 14px;
+          border: 1px solid #ddd;
+          background-color: #fff;
+          &:hover,
+          &:active,
+          &:focus {
+            outline: none;
+            color: white;
+            background-image: linear-gradient(to right, #ffcccc, #cc66cc);
+          }
+        }
+        // 个人中心
+        .mine_img {
+          height: 52px;
+          width: 52px;
+          margin-left: 23px;
+          float: right;
+          margin-top: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
