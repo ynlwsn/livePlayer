@@ -15,10 +15,19 @@
                     <div class="active-view">
                         <SubTitle title="推荐活动" more="更多 >"  icons='icon3' pathName="Actions"></SubTitle>
                         <div class="block">
-                            <el-carousel trigger="click">
-                            <el-carousel-item v-for="item in 4" :key="item">
+                            <el-carousel trigger="click" height="2.08rem">
+                            <el-carousel-item v-for="(img,index) in imgLists" :key="index">
+                                <img v-bind:src="img.url">
                             </el-carousel-item>
                             </el-carousel>
+                        </div>
+                        <div class="view_left">
+                            <div class="small_box">
+                                <img src="../../assets/icon-huodong.png" alt="">
+                            </div>
+                            <div class="small_box">
+                                <img src="../../assets/icon-huodong.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="news">
@@ -111,7 +120,14 @@ export default {
             anchor1:5,
             anchor2:10,
             anchor3:10,
-            attention:'关注'
+            imgLists:[
+                {'url':require('../../assets/tj.png')},
+                {'url':require('../../assets/tj.png')},
+                {'url':require('../../assets/tj.png')},
+                {'url':require('../../assets/tj.png')},
+            ],
+            attention:'关注',
+            
         }
     },
     components:{

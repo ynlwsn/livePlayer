@@ -2,7 +2,7 @@
   <div id="app">
     <Top v-if="nLive"></Top>
       <router-view/>
-    <Foot></Foot>
+    <Foot v-if="nLive"></Foot>
   </div>
 </template>
 
