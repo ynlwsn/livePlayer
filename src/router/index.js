@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import HomePage from '@/components/Home/HomePage'
 import Live from '@/components/Live'
 import ShortPlayer from '@/components/ShortPlayer'
-import Ranking from '@/components/Ranking'
+import HomeRank from '@/components/rank/HomeRank'
+import ActualRank from '@/components/rank/ActualRank'
 import DownLoad from '@/components/DownLoad'
 import LiveRoom from '@/components/LiveRoom/LiveRoom'
 import Personal from '@/components/Personal'
@@ -35,9 +36,14 @@ export default new Router({
       component: ShortPlayer
     },
     {
-      path: '/ranking',
-      name: 'Ranking',
-      component: Ranking
+      path: '/home-rank',
+      name: 'HomeRank',
+      component: HomeRank
+    },
+    {
+      path: '/actual-rank',
+      name: 'ActualRank',
+      component: ActualRank
     },
     {
       path: '/down_load',

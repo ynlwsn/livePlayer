@@ -12,8 +12,12 @@
         <li>
           <router-link to="/short-player">短视频</router-link>
         </li>
-        <li>
-          <router-link to="/ranking">排行</router-link>
+        <li @mouseenter="showSelect" @mouseleave="hiddenSelect">
+          <div>排行<i class="el-icon-caret-bottom"></i></div>
+          <div class="rank_select" v-show="showMore">
+            <router-link tag="p" to="/actual-rank">实时排行榜</router-link>
+            <router-link tag="p" to="/home-rank">家族排行榜</router-link>
+          </div>
         </li>
         <li>
           <router-link to="/down_load">下载</router-link>
@@ -69,7 +73,7 @@
             </ul>
           </div>
         </div>
-        <el-button class="register">注册</el-button>
+        <el-button class="register" @click="showDialog">注册<Popup :centerDialogVisible ="Dialog" ></Popup></el-button>
         <el-button class="login">登陆</el-button>
         <img :src="mine" alt class="mine_img" @click="personalCenter"/>
       </div>
@@ -78,14 +82,20 @@
 </template>
 
 <script>
+import Popup from './popup'
 export default {
   data() {
     return {
+      Dialog:false,
       mine: require("../../assets/logo.png"),
       input: "",
       current: "0",
-      showHistory: false
+      showHistory: false,
+      showMore:false
     };
+  },
+  components:{
+    Popup,
   },
   methods: {
     // 点击logo返回首页
@@ -100,6 +110,20 @@ export default {
     },
     personalCenter(){
       this.$router.push('/personal')
+    },
+    showDialog(){
+      if(this.Dialog){
+
+      this.Dialog = false
+      }else{
+        this.Dialog = true
+      }
+    },
+    showSelect(){
+      this.showMore = true
+    },
+    hiddenSelect(){
+      this.showMore = false
     }
   }
 };

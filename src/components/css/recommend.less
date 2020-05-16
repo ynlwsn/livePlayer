@@ -25,7 +25,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        z-index: 1000;
+        z-index: 100;
         a{
           color: white;
           font-weight: 800;
@@ -53,8 +53,17 @@
           margin-left: 26px;
           i{
             display: inline-block;
-            font-size: 26px;
-            color: white;
+            height: 24px;
+            width: 24px;
+            position: relative;
+            background-size: cover;
+            top:3px;
+          }
+          .video-pause{
+            background-image: url(../../assets/icon-kaishi.png);
+          }
+          .video-play{
+            background-image: url(../../assets/icon-zanting.png);
           }
         }
         .voice{
@@ -65,11 +74,19 @@
           justify-content: start;
           align-items: center;
           i{
-            width: 40px;
-            height: 40px;
-            font-size: 26px;
+            width: 24px;
+            height: 24px;
             display: inline-block;
-            color: white;
+            background-size: cover;
+            position: relative;
+            top:-4px;
+            margin-right: 6px;
+          }
+          .voice{
+            background-image: url(../../assets/icon-shengyin.png);
+          }
+          .silent{
+            background-image: url(../../assets/icon-jingyin.png);
           }
           .el-slider{
             width: 100px;

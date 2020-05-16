@@ -28,7 +28,25 @@
           &:first-child {
             margin: 0;
           }
-  
+          .rank_select{
+            background-color: white;
+            border-radius: 6px;
+            width: 100px;
+            height: 80px;
+            border:1px solid #f0f2f3;
+            position: absolute;
+            overflow: hidden;
+            p{
+              height: 40px;
+              width: 100%;
+              text-align: center;
+              line-height: 40px;
+              cursor: pointer;
+              &:hover{
+                background-color: #f0f2f3;
+              }
+            }
+          }
           a {
             font-size: 16px;
           }
@@ -186,13 +204,18 @@
           font-size: 14px;
           border: 1px solid #ddd;
           background-color: #fff;
-          &:hover,
-          &:active,
-          &:focus {
-            outline: none;
-            color: white;
-            background-image: linear-gradient(to right, #ffcccc, #cc66cc);
+        }
+        .register{
+          background-image: linear-gradient(to right, #ffcccc, #cc66cc);
+          color: white;
+          border:1px solid transparent;
+          &:hover{
+            border:1px solid #f1ff33;
           }
+        }
+        .login:hover{
+          border:1px solid #ff3399;
+          color: #ff3399;
         }
         // 个人中心
         .mine_img {

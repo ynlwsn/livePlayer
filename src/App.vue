@@ -70,7 +70,7 @@ button{
 #app {
   margin-top:64px;
   width: 100%;
-  height: 100%;
+  background-color: #f0f2f3;
 }
 button{
         cursor: pointer;
