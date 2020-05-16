@@ -3,16 +3,21 @@
     <Top v-if="nLive"></Top>
       <router-view/>
     <Foot v-if="nLive"></Foot>
+    <div class="mask" v-if="$store.state.showMask">
+      <Login></Login>
+    </div>
   </div>
 </template>
 
 <script>
 import Top from './components/Common/Top'
-import Foot from "./components/Common/Foot";
+import Foot from "./components/Common/Foot"
+import Login from './components/Common/Login'
+import Register from './components/Common/Register'
 export default {
   name: 'App',
   data(){
-    return{
+    return{ 
       nLive:true,
     }
   },
@@ -35,6 +40,7 @@ export default {
   components:{
     Top,
     Foot,
+    Login
   }
 }
 </script>
@@ -67,6 +73,7 @@ button{
     width: 100%;
     height: 100%;
   }
+
 #app {
   margin-top:64px;
   width: 100%;
@@ -75,4 +82,13 @@ button{
 button{
         cursor: pointer;
     }
+.mask{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1001;
+}
 </style>

@@ -73,7 +73,7 @@
             </ul>
           </div>
         </div>
-        <el-button class="register" @click="showDialog">注册<Popup :centerDialogVisible ="Dialog" ></Popup></el-button>
+        <el-button class="register" @click="showDialog">注册</el-button>
         <el-button class="login">登陆</el-button>
         <img :src="mine" alt class="mine_img" @click="personalCenter"/>
       </div>
@@ -82,7 +82,6 @@
 </template>
 
 <script>
-import Popup from './popup'
 export default {
   data() {
     return {
@@ -95,7 +94,6 @@ export default {
     };
   },
   components:{
-    Popup,
   },
   methods: {
     // 点击logo返回首页
@@ -112,12 +110,7 @@ export default {
       this.$router.push('/personal')
     },
     showDialog(){
-      if(this.Dialog){
-
-      this.Dialog = false
-      }else{
-        this.Dialog = true
-      }
+      this.$store.commit('toggleMask')
     },
     showSelect(){
       this.showMore = true

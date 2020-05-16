@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomePage from '@/components/Home/HomePage'
-import Live from '@/components/Live'
-import ShortPlayer from '@/components/ShortPlayer'
-import HomeRank from '@/components/rank/HomeRank'
-import ActualRank from '@/components/rank/ActualRank'
-import DownLoad from '@/components/DownLoad'
-import LiveRoom from '@/components/LiveRoom/LiveRoom'
-import Personal from '@/components/Personal'
-import Actions from '../components/Home/ActivityPage.vue'
+const HomePage = resolve => require(['@/components/Home/HomePage'],resolve)
+const Live = resolve => require(['@/components/Live'],resolve)
+const ShortPlayer  = resolve => require(['@/components/ShortPlayer'],resolve)
+const HomeRank = resolve => require(['@/components/rank/HomeRank'],resolve)
+const ActualRank = resolve => require(['@/components/rank/ActualRank'],resolve)
+const DownLoad = resolve => require(['@/components/DownLoad'],resolve)
+const LiveRoom = resolve => require(['@/components/LiveRoom/LiveRoom'],resolve)
+const Actions = resolve => require(['../components/Home/ActivityPage.vue'],resolve)
+const Personal= resolve=>require(['@/components/Personal'],resolve)
 
 Vue.use(Router)
 

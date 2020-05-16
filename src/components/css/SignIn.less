@@ -1,0 +1,89 @@
+.signIn{
+    .el-icon-circle-close{
+        font-size: 16px;
+        top:8px;cursor: pointer;
+    }
+    .sign_box{
+        position: fixed;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:419px;
+        height:563px;
+        background:rgb(255, 255, 255);
+        border-radius:6px;
+        padding-left: 10px;
+        .phone_login{
+            float: right;
+            margin-top:-2px;
+            height: 66px;
+            width: 61px;
+            background-image: url(../../assets/login/sj01.png);
+            &:hover{
+                background-image: url(../../assets/login/sj02.png);
+            }
+        }
+        .input_box{
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           align-content: center;
+        }
+        .sign_title{
+            height: 50px;
+            width: 80%;
+           margin: 0 auto;
+            border-bottom: 1px solid #ff3399;
+            h2{
+                width: 60px;
+                height: 50px;
+                line-height: 50px;
+                margin-right: 18px;
+                display: inline-block;
+                font-size: 24px;
+                color:#ff3399;
+                font-weight: 400;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                &:hover{
+                    border-bottom:3px solid #ff3399;
+                }
+            }
+        }
+        .sign_content{
+            width: 80%;
+            margin: 0 auto;
+            div{
+                height: 63px;
+                border-bottom: 1px solid #ccc;
+                i{
+                    height: 20px;
+                    width: 18px;
+                    display: inline-block;
+                }
+                
+            input{
+                display: inline-block;
+                border:none;
+                width: 300px;
+                // height: 63px;
+                height: 62px;
+                &:focus{
+                    outline: none;
+                }
+            }
+            }
+        }
+        .signBtn{
+            width:294px;
+            height:40px;
+            background:linear-gradient(218deg,rgba(204,102,204,1) 0%,rgba(255,204,204,1) 100%);
+            opacity:1;
+            border-radius:6px;
+            color: white;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+    }
+}
