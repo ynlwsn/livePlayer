@@ -73,8 +73,8 @@
             </ul>
           </div>
         </div>
-        <el-button class="register" @click="showDialog">注册</el-button>
-        <el-button class="login">登陆</el-button>
+        <el-button class="register" @click="showDialog('register')">注册</el-button>
+        <el-button class="login" @click="showDialog('login')">登陆</el-button>
         <img :src="mine" alt class="mine_img" @click="personalCenter"/>
       </div>
     </div>
@@ -90,7 +90,8 @@ export default {
       input: "",
       current: "0",
       showHistory: false,
-      showMore:false
+      showMore:false,
+      signIn:''
     };
   },
   components:{
@@ -107,10 +108,12 @@ export default {
       this.showHistory = false;
     },
     personalCenter(){
-      this.$router.push('/personal')
+      this.$router.push('/mine')
     },
-    showDialog(){
+    showDialog(val){
       this.$store.commit('toggleMask')
+      this.signIn = val
+      this.$emit('signIn',this.signIn)
     },
     showSelect(){
       this.showMore = true

@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <Top v-if="nLive"></Top>
+    <Top v-if="nLive" @signIn  = isSign></Top>
       <router-view/>
     <Foot v-if="nLive"></Foot>
     <div class="mask" v-if="$store.state.showMask">
-      <Login></Login>
+      <Register v-if="sign === 'register'"></Register>
+      <Login v-else></Login>
     </div>
   </div>
 </template>
@@ -19,6 +20,7 @@ export default {
   data(){
     return{ 
       nLive:true,
+      sign:''
     }
   },
   created(){
@@ -37,10 +39,16 @@ export default {
       }
   }
   },
+  methods:{
+    isSign(val){
+      this.sign = val
+    }
+  },
   components:{
     Top,
     Foot,
-    Login
+    Login,
+    Register
   }
 }
 </script>

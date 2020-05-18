@@ -107,6 +107,64 @@
             }
           }
         }
+        .ph_box,.gz_box{
+          position: absolute;
+          overflow: auto;
+          right: -414px;
+          top: 10px;
+          z-index: 100;
+          width:414px;
+          height:758px;
+          background:rgba(255,255,255,1);
+          opacity:1;
+          border-radius:8px;
+        }
+        .gz_box{
+          padding:12px;
+          padding-left: 20px;
+          .search{
+            width: 380px;
+            input{
+              width: 340px;
+              height:40px;
+              background:rgba(238,238,238,1);
+              opacity:1;
+              border-radius:7px;
+              border: none;
+              &:focus{
+                outline: none;
+              }
+            }
+            i{
+              height: 20px;
+              width: 23px;
+              cursor: pointer;
+              position: relative;
+              right: 40px;
+              top: 3px;
+              display: inline-block;
+              background-size: cover;
+              background-image: url("../../assets/icon-search.png");
+            }
+          }
+          .gz_lists{
+            width: 100%;
+            margin-top: 20px;
+            li{
+              width: 100%;
+              height: 80px;
+            }
+          }
+          img{
+            float: left;
+          }
+          .kb_info{
+            float: left;
+            text-align: left;
+            margin-left: 20px;
+          }
+        }
+        
         img {
           height: 40px;
           widows: 40px;

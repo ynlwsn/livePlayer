@@ -23,6 +23,10 @@ Vue.use(Vuex)
 Vue.use(ElementUI)
 Vue.use(VideoPlayer);
 /* eslint-disable no-new */
+// 避免每次打开页面的时候不是顶部
+router.afterEach((to,from,next) =>{
+  window.scrollTo(0,0)
+})
 new Vue({
   el: '#app',
   router,

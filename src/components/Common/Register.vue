@@ -2,10 +2,9 @@
   <div class="register signIn">
     <div class="sign_box">
           <i class="el-icon-circle-close" @click="close"></i>
-          <div class="phone_login"></div>
+          <!-- <div class="phone_login"></div> -->
           <div class="input_box">
             <div class="sign_title">
-                <h2>登陆</h2>
                 <h2>注册</h2>
             </div>
             <div class="sign_content">
@@ -26,11 +25,17 @@
 
 <script>
 export default {
-    name:'Register'
+    name:'Register',
+    methods:{
+        close(){
+            this.$store.commit('toggleMask')
+        }
+    }
 }
 
 </script>
 <style scoped lang="less">
+@import '../css/SignIn.less';
 .register{
     .upolicy{
         display: flex;

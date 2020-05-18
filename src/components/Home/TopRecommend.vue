@@ -56,7 +56,8 @@ export default {
           {
             withCredentials: false,
             type: "application/x-mpegURL", //播放类型，如果为rtmp配置为rtmp/mp4
-            src: "http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8" //直播流地址
+            // src: "http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8" //直播流地址
+            src: "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8" //直播流地址
           }
         ],
         poster: "../../assets/downBg01.jpg", //你的封面地址

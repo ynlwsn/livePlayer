@@ -9,6 +9,8 @@ const DownLoad = resolve => require(['@/components/DownLoad'],resolve)
 const LiveRoom = resolve => require(['@/components/LiveRoom/LiveRoom'],resolve)
 const Actions = resolve => require(['../components/Home/ActivityPage.vue'],resolve)
 const Personal= resolve=>require(['@/components/Personal'],resolve)
+const Mine= resolve=>require(['@/components/Mine/Mine'],resolve)
+
 
 Vue.use(Router)
 
@@ -59,6 +61,12 @@ export default new Router({
       path: '/personal',
       name: 'Personal',
       component: Personal
+    },
+    {
+      path: '/mine',
+      name: 'Mine',
+      component: Mine,
+      
     },
   ]
 })
