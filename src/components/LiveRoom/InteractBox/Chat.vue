@@ -10,7 +10,7 @@ export default {
 </script>
 <style scoped lang="less">
 .chat{
-    height: 828px;
+    height: 755px;
     width: 100%;
     background-color: blue;
     z-index: 100;

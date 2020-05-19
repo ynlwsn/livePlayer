@@ -48,7 +48,7 @@ export default {
     Top,
     Foot,
     Login,
-    Register
+    Register,
   }
 }
 </script>

@@ -9,7 +9,7 @@
           </div>
       </div>
       <div class="collapse">
-        <el-collapse v-model="activeNames" @change="handleChange">
+        <el-collapse v-model="activeNames" @change="handlerChange">
           <el-collapse-item name="1">
               <template slot="title">
                  <i class="header-icon icon_zh"></i>账户设置
@@ -33,22 +33,15 @@
                 <li @click="changeTab('我的直播')">我的直播</li>
             </ul>
           </el-collapse-item>
-          <el-collapse-item name="3">
-              <template slot="title">
-                 <i class="header-icon icon_tx"></i>账户体现
-            </template>
-          </el-collapse-item>
-          <el-collapse-item name="4">
-              <template slot="title">
-                 <i class="header-icon icon_cz"></i>我的充值
-            </template>
-          </el-collapse-item>
         </el-collapse>
+        <router-link tag="div" to="/mine/withdraw" class="withdraw"><i class="icon_tx"></i>账户提现</router-link>
+        <router-link tag="div" to="/myrecharge"  class="myRecharge"><i class="icon_cz"></i>我的充值</router-link>
       </div>
     </div>
     <div class="mian_content">
-    <div class="title">{{tab}}</div>
-        <BaseInfo v-if="tab === '基本资料'"></BaseInfo>
+    <div class="title" v-show="tab !==''">{{tab}}</div>
+        <Base v-if="tab === '基本信息'"></Base>
+        <BaseInfo v-else-if="tab === '基本资料'"></BaseInfo>
         <ChangePhoto v-else-if="tab === '修改头像'"></ChangePhoto>
         <ChangePassword v-else-if="tab === '修改密码'"></ChangePassword>
         <Identification v-else-if="tab === '我要认证'"></Identification>
@@ -57,13 +50,14 @@
         <BlackLists v-else-if="tab === '我的黑名单'"></BlackLists>
         <Administrator v-else-if="tab === '我的管理员'"></Administrator>
         <MyLive v-else-if="tab === '我的直播'"></MyLive>
-        <Withdraw></Withdraw>
+        <router-view v-else-if="tab === ''"></router-view>
     </div>
   </div>
 </template>
 
 <script>
 import BaseInfo from './BaseInfo'
+import Base from './Base'
 import ChangePhoto from './ChangePhoto'
 import ChangePassword from './ChangePassWord'
 import Identification from './Identification'
@@ -78,17 +72,32 @@ export default {
    data() {
       return {
         activeNames: ['1'],
-        tab:'基本资料',
+        tab:'基本信息',
       };
     },
-    components:{BaseInfo, ChangePhoto, ChangePassword, Identification, Focus, MyFans, BlackLists, Administrator, MyLive, Withdraw},
+    components:{BaseInfo, ChangePhoto, ChangePassword, Identification, Focus, MyFans, BlackLists, Administrator, MyLive, Withdraw, Base},
     methods: {
-      handleChange(val) {
-        console.log(val);
+      handlerChange(val){
+        console.log(val)
       },
       changeTab(val){
-        this.tab = val;
-      }
+        if(val !==''){
+          this.tab = val;
+          this.$router.push('/mine')
+        }
+      },
+    },
+    watch:{
+      $route(to,from){
+        if(to.path === '/mine/withdraw' || to.path === '/mine/myrecharge'){
+          this.tab =''
+        }
+      },
+    },
+    created(){
+      if(this.$route.path === '/mine/withdraw' || this.$route.path === '/mine/myrecharge'){
+          this.tab =''
+        }
     }
 };
 </script>

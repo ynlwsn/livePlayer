@@ -1,6 +1,5 @@
 .actual-rank{
     margin-top:64px;
-    
     background-color: #f0f2f3;
     .actual_title{
         height: 77px;
@@ -19,16 +18,22 @@
                 text-align: center;
                 &:hover{
                     font-weight: 800;
-                    border-bottom: 2px solid #333;
+                    color: red;
+                    border-bottom: 2px solid red;
                 }
             }
         }
     }
     .actual_content{
         display: flex;
+        height: auto;
         justify-content: space-between;
         align-content: flex-start;
         padding-top: 20px;
         padding-bottom: 40px;
+    }
+    .router-link-active{
+        color: red;
+        border-bottom:2px solid red;
     }
 }

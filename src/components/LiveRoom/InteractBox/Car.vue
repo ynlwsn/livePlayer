@@ -12,11 +12,10 @@
 export default {
     name:'Car',
 }
-
 </script>
 <style scoped lang="less">
 .car{
-    height: 828px;
+    height: 755px;
     width: 100%;
     background-color: rgb(255, 47, 210);
     z-index: 100;

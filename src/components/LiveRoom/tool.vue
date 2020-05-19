@@ -182,7 +182,7 @@ export default {
     return {
       'zj':false,
       'gz':false,
-      'ph':true,
+      'ph':false,
       input2:'',
     }
   },

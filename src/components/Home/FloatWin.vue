@@ -20,7 +20,7 @@
           </li>
           <li>
               <img src="../../assets/aside/icon-gh.png" alt="">
-              <p>工会</p>
+              <p>家族</p>
           </li>
           <li>
               <img src="../../assets/aside/icon-help.png" alt="">
