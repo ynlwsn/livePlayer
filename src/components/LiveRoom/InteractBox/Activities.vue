@@ -19,7 +19,7 @@ export default {
 </script>
 <style scoped lang="less">
 .activities{
-    height: 828px;
+    height: 755px;
     width: 100%;
     z-index: 100;
     padding:20px 12px 20px 12px;

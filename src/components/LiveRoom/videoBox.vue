@@ -2,7 +2,7 @@
   <div class="video_box">
     <div class="video_header">
       <div class="zb_info">
-        <img src="../../assets/logo.png" alt class="ulogo" @click="changePersonal"/>
+        <img src="../../assets/logo.png" alt class="ulogo" @click="changePersonal" />
         <div class="identity">
           <div>
             <div class="identity_txt">
@@ -12,21 +12,30 @@
             <button class="identity_btn">+ 关注</button>
           </div>
           <div class="tag_box">
-              <img src="../../assets/icon-jiazu.png" alt class="tag" />
-              <img src="../../assets/icon-jiazu.png" alt class="tag" />
-              <img src="../../assets/icon-jiazu.png" alt class="tag" />
-              <img src="../../assets/icon-jiazu.png" alt class="tag" />
+            <img src="../../assets/icon-jiazu.png" alt class="tag" />
+            <img src="../../assets/icon-jiazu.png" alt class="tag" />
+            <img src="../../assets/icon-jiazu.png" alt class="tag" />
+            <img src="../../assets/icon-jiazu.png" alt class="tag" />
           </div>
         </div>
       </div>
       <div class="operation">
         <div class="operation_item">
           <i class="el-icon-share"></i>
-          <span>分享</span>
+          <el-tooltip class="item" effect="light" placement="bottom-end">
+            <div slot="content">
+              <img src="../../assets/wx01.png" alt="" @click="share" style="cursor: pointer;">
+              <img src="../../assets/icon-qq.png" alt="" @click="share" style="cursor: pointer;">
+              <img src="../../assets/icon_kj.png" alt="" @click="share" style="cursor: pointer;">
+              <img src="../../assets/icon-weibo.png" alt="" @click="share" style="cursor: pointer;">
+            </div>
+            <!-- <el-button>下右</el-button> -->
+            <span>分享</span>
+          </el-tooltip>
         </div>
         <div class="operation_item">
           <i class="el-icon-warning-outline"></i>
-          <span>举报</span>
+          <span @click="report">举报</span>
         </div>
       </div>
     </div>
@@ -109,8 +118,14 @@ export default {
       this.ind++;
       this.$refs.moreGift.style.marginLeft = -(this.ind * 58) + "px";
     },
-    changePersonal(){
+    changePersonal() {
       this.$router.push("/personal");
+    },
+    share(){
+      console.log(1232)
+    },
+    report(){
+      
     }
   }
 };

@@ -64,9 +64,12 @@ export default {
       justify-content: space-between;
       align-items: center;
       padding:0 12px;
+      margin:0 auto;
+      width: 90%;
       li {
-        text-align: center;
         height: 40px;
+        line-height: 40px;
+        width: 28%;
         cursor: pointer;
         text-align: center;
       }
@@ -84,9 +87,11 @@ export default {
         justify-content: space-between;
         align-items: center;
         padding:0 12px;
+        margin:0 auto;
         li {
           height: 26px;
           text-align: center;
+          width: 30%;
           padding-top: 2px;
         }
       }
@@ -94,6 +99,8 @@ export default {
           height: 500px;
           ul{
               padding:0 12px;
+              margin:0 auto;
+              width: 90%;
               li{
                   display: flex;
                   height: 64px;

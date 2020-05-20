@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="earn">
-                    <SubTitle title="收益榜" more="更多 >"  icons='icon7'></SubTitle>
+                    <SubTitle title="收益榜" more="更多 >"  icons='icon7' pathName="ZbRank"></SubTitle>
                     <div class="example_box rank_box">
                         <ul class="times">
                             <li>日榜</li>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="contribute">
-                    <SubTitle title="贡献榜" more="更多 >"  icons='icon8'></SubTitle>
+                    <SubTitle title="贡献榜" more="更多 >"  icons='icon8' pathName="ZbRank"></SubTitle>
                     <div class="example_box rank_box">
                          <ul class="times">
                             <li>日榜</li>

@@ -1,9 +1,10 @@
 <template>
   <div class="interact">
-      <div class="rank_daily">
-          <div class="rank_daily_title">
+      <div class="rank_daily" ref="rankDaily">
+          <div class="expansion_box">
+          <div class="rank_daily_title" @click="upOrDown">
               <h4><div>日榜</div><div>榜单</div></h4>
-              <i></i>
+              <i :class="icon"></i>
           </div>
           <ul class="rank_daily_content">
               <li>
@@ -12,11 +13,32 @@
                   <p>暖暖的张先生。。。</p>
               </li>
               <li>
-                  <span>NO.2</span>
+                  <span>NO.1</span>
+                  <i></i>
+                  <p>暖暖的张先生。。。</p>
+              </li>
+              <li>
+                  <span>NO.1</span>
+                  <i></i>
+                  <p>暖暖的张先生。。。</p>
+              </li>
+              <li>
+                  <span>NO.1</span>
+                  <i></i>
+                  <p>暖暖的张先生。。。</p>
+              </li>
+              <li>
+                  <span>NO.1</span>
+                  <i></i>
+                  <p>暖暖的张先生。。。</p>
+              </li>
+              <li>
+                  <span>NO.1</span>
                   <i></i>
                   <p>暖暖的张先生。。。</p>
               </li>
           </ul>
+          </div>
       </div>
       <div class="interact_area">
           <ul class="interact_title">
@@ -47,11 +69,23 @@ export default {
         return{
             interact_title:['全部','聊天','点才艺','礼单','活动','座驾'],
             current:0,
+            icon:'el-icon-arrow-down'
         }
     },
     methods:{
         changeAct(ind){
             this.current = ind
+        },
+        // 日榜榜单展开和收起
+        upOrDown(){
+            if(this.icon === 'el-icon-arrow-down'){
+                this.icon = 'el-icon-arrow-up'
+                this.$refs.rankDaily.style.overflow = 'visible'
+            }else if(this.icon === 'el-icon-arrow-up'){
+                this.icon = 'el-icon-arrow-down'
+                this.$refs.rankDaily.style.overflow = 'hidden'
+                
+            }
         }
     },
     components:{
@@ -69,32 +103,51 @@ export default {
     top:22px;
     .rank_daily{
         width:480px;
-        height:88px;
+        height: 88px;
+        overflow: hidden;
         background-color: rgba(0,0,0,0.46);
+        .expansion_box{
+            height: 898px;
+            width: 480px;
+            z-index: 999;
+            background-color: rgba(0,0,0,0.46);
+        }
         .rank_daily_title{
-            display: inline-block;
-            height: 88px;
+            min-height: 88px;
             width: 17%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            z-index: 1000;
             h4{
-                position: absolute;
                 width: 34px;
-                text-align: center;
-                left: 50%; 
-                top:50%;
-                transform: translate(-50%,-50%);
-                text-align: center;
                 color: #ff33cc;
                 font-weight: 400;
+                position: relative;
+                top: 20px;
+                left: 24px;
+            }
+            i{
+               width: 19px;
+               height: 10px;
+               background-size: cover;
+               color: white;
+               position: relative;
+               top:20px;
+               left: 40px;
+               transform: translateX(-50%);
             }
         }
         .rank_daily_content{
-            display: inline-block;
-            width: 76%;
-            position: absolute;
-            right: 20px;
+            max-height: 898px;
+            overflow: auto;
+            width: 83%;
+            padding-left: 22px;
+            z-index: 1000;
+            left: 17%;
             li{
-                height: 36px;
-                line-height: 36px;
+                height: 42px;
+                line-height: 42px;
                 width: 100%;
                 border-bottom:1px solid rgba(150, 149, 149, 0.66);
                 span{
@@ -140,7 +193,7 @@ export default {
             }
         }
         .interact_content{
-            width: 100%;
+            width: 99.9%;
             height: 755px;
             background-color: #fff;
         }

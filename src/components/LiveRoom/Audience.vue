@@ -45,7 +45,7 @@
         <div v-if="isActive === 'gz'">
           <ul>
             <li>
-              <p><img src="../../assets/icon-gj.png" alt=""><img src="../../assets/icon-gj.png" alt=""><span>34234</span></p>
+              <p><img src="../../assets/icon-gj.png" alt=""><span>34234</span></p>
               <p><img src="../../assets/icon-jiazu.png" alt=""><span>这是谁</span></p>
             </li>
             <li>
