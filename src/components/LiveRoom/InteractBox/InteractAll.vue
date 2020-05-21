@@ -39,9 +39,12 @@
           <option value="zb">小冷</option>
         </select>
         <el-checkbox v-model="checked">私聊</el-checkbox>
-          <img src="../../../assets/bq01.png" alt />
-          <img src="../../../assets/money.png" alt style="marginLeft:-0.31rem"/>
-        <img src="../../../assets/clear.png" alt class="clear"/>
+        <div class="emoji" v-show="emoji">
+          <Emoji></Emoji>
+        </div>
+        <img src="../../../assets/bq01.png" alt @click="showEmoji" style="cursor: pointer;"/>
+        <img src="../../../assets/money.png" alt style="marginLeft:-0.31rem" />
+        <img src="../../../assets/clear.png" alt class="clear" />
       </div>
       <div class="second_row">
         <div class="chat_">
@@ -56,12 +59,24 @@
 </template>
 
 <script>
+import Emoji from "../../Common/Emoji";
 export default {
   name: "InteractAll",
   data() {
     return {
-      checked: true
+      checked: true,
+      emoji:false
     };
+  },
+  components: { Emoji },
+  methods:{
+    showEmoji(){
+      if(this.emoji){
+        this.emoji = false
+      }else{
+        this.emoji = true
+      }
+    }
   }
 };
 </script>
@@ -130,11 +145,11 @@ export default {
       justify-content: space-between;
       align-items: center;
     }
-    .first_row{
-      select{
+    .first_row {
+      select {
         background-color: #ccc;
         border-radius: 10px;
-        &:focus{
+        &:focus {
           outline: none;
         }
       }
@@ -167,18 +182,23 @@ export default {
           background-image: linear-gradient(180deg, #cc66cc 0%, #ffcccc 100%);
         }
       }
-      
-        .send {
-          width: 74px;
-          height: 36px;
-          line-height: 36px;
-          text-align: center;
-          margin-left: 12px;
-          background-image: linear-gradient(180deg, #cc66cc 0%, #ffcccc 100%);
-          border-radius: 18px;
-          color: white;
-        }
+
+      .send {
+        width: 74px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        margin-left: 12px;
+        background-image: linear-gradient(180deg, #cc66cc 0%, #ffcccc 100%);
+        border-radius: 18px;
+        color: white;
+      }
     }
+  }
+  .emoji{
+    position: absolute;
+    top: -190px;
+    left: 180px;
   }
 }
 </style>

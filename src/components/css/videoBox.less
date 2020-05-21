@@ -3,69 +3,80 @@
     position  : absolute;
     left      : 102px;
     margin-top: 22px;
+
     .video_header {
         width        : 993px;
         height       : 73px;
         background   : rgba(0, 0, 0, 0.64);
         margin-bottom: 9px;
-        padding-left: 7px;
+        padding-left : 7px;
         padding-right: 17px;
-        position: relative;
+        position     : relative;
+
         .zb_info {
-            width: auto;
-            height: 73px;
+            width   : auto;
+            height  : 73px;
             position: relative;
-            top:4px;
+            top     : 4px;
+
             .ulogo {
                 height: 56px;
                 width : 56px;
             }
+
             .identity {
                 height : 73px;
                 color  : white;
                 display: inline-block;
+
                 .identity_txt {
                     display: inline-block;
+
                     p {
                         font-size: 12px;
                     }
                 }
 
                 .identity_btn {
-                    height       : 22px;
-                    padding:0 4px;
-                    line-height: 22px;
-                    background   : rgba(250, 58, 112, 1);
-                    border-radius: 2px;
-                    color        : white;
-                    font-size    : 12px;
+                    height        : 22px;
+                    padding       : 0 4px;
+                    line-height   : 22px;
+                    background    : rgba(250, 58, 112, 1);
+                    border-radius : 2px;
+                    color         : white;
+                    font-size     : 12px;
                     vertical-align: top;
-                    margin-left: 8px;
+                    margin-left   : 8px;
                 }
             }
-            .tag_box{
-                width: auto;
-                height: 25px;
+
+            .tag_box {
+                width     : auto;
+                height    : 25px;
                 margin-top: 4px;
-                .tag{
-                    width: auto;
+
+                .tag {
+                    width : auto;
                     height: 16px;
                 }
             }
         }
-        .operation{
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 73px;
+
+        .operation {
+            position   : absolute;
+            right      : 0;
+            top        : 0;
+            height     : 73px;
             line-height: 73px;
-            .operation_item{
-                cursor: pointer;
-                display: inline-block;
-                color: white;
-                font-size: 14px;
+
+            .operation_item {
+                cursor      : pointer;
+                display     : inline-block;
+                color       : white;
+                font-size   : 14px;
                 margin-right: 12px;
-                &:hover{
+
+                &:hover {
                     color: #ff3399;
                 }
             }
@@ -85,77 +96,181 @@
         width           : 100%;
         height          : 68px;
         background-color: #fff;
-        .gift_box{
-            height: 100%;
-            float: left;
-            width: 59%;
-            overflow:hidden;
-            ul{
-                margin-left: 20px;
-                padding-top: 6px;
-                height: 68px;
-                width: 10000000px;//动态设置
-                li{
-                    width:58px;
-                    height:56px;  
-                    display: inline-block;
-                    margin-right: 12px;
-                    border:2px solid rgba(255,227,36,1);
-                    border-radius:12px;
-                }
+
+        .gift_box {
+            width   : 60%;
+            display : inline-block;
+            position: relative;
+        }
+
+        ul {
+            margin-left     : 8px;
+            width           : 95%;
+            height          : 64px;
+            background-color: rgba(255, 255, 255, 0.64);
+            position        : absolute;
+            overflow        : hidden;
+            bottom          : -4px;
+            border-radius   : 12px;
+            padding-left    : 8px;
+
+            li {
+                width        : 58px;
+                height       : 56px;
+                display      : inline-block;
+                margin-right : 4px;
+                border       : 1px solid rgba(255, 227, 36, 1);
+                border-radius: 12px;
+                margin-top   : 4px;
+                margin-bottom: 8px;
             }
         }
-        
-        .watchMore{
-            cursor: pointer;
-            width:15px;
-            height:52px;
-            line-height: 52px;
-            text-align: center;
-            background:rgba(255,227,36,1);
-            border-radius:8px;
-            color: white;
-            float: left;
-            margin-top: 6px;
-            margin-left: 10px;
-            margin:6px 10px 0 6px;
+
+        .showMore {
+            position        : absolute;
+            bottom          : 63px;
+            height          : 201px;
+            width           : 588px;
+            border-radius   : 12px;
+            background-color: rgba(255,255,255,0.64);
+            
         }
-        .send_gift{
-            float: left;
+        /deep/.el-tab-pane{
+            height: 128px;
+        }
+        /deep/.el-tabs__header{
+            padding-left: 20px;
+        }
+        /deep/.el-tabs__item:hover{
+            color:#ff3399;
+        }
+        /deep/.el-tabs__item.is-active{
+            color:#ff3399;
+        }
+        /deep/.el-tabs__active-bar {
+            border-bottom: 2px solid #ff3399;
+          }
+        .moreGifts {
+            // background-color: pink;
+            background-color: rgba(0,0,0,0);
+            height: 128px;
+            width: 100%;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                height: 1px;
+                width : 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius   : 10px;
+                background-color: #ccc;
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius   : 10px;
+                background-color: #fff;
+            }
+        }
+        .watchMore {
+            cursor       : pointer;
+            width        : 15px;
+            height       : 52px;
+            line-height  : 52px;
+            text-align   : center;
+            background   : rgba(255, 227, 36, 1);
+            border-radius: 8px;
+            color        : white;
+            float        : right;
+            margin-top   : 6px;
+            margin-left  : 10px;
+            margin       : 6px 10px 0 6px;
+        }
+
+        .send_gift {
             margin-right: 8px;
-            margin-top:6px;
-            span{
-                float: left;
-                width:33px;
-                height:56px;
-                border:2px solid rgba(255,227,36,1);
-                border-right: none;
-                border-radius:12px 0px 0px 12px;
-                text-align: center;
-                padding-top:4px;
+            margin-top  : 6px;
+            display     : inline-block;
+
+            span {
+                float        : left;
+                width        : 33px;
+                height       : 56px;
+                border       : 2px solid rgba(255, 227, 36, 1);
+                border-right : none;
+                border-radius: 12px 0px 0px 12px;
+                text-align   : center;
+                padding-top  : 4px;
             }
-            select{
-                float: left;
-                font-size: 12px;
-                width:58px;
-                height:56px;
-                border:2px solid rgba(255,227,36,1);
-                border-radius:0px 12px 12px 0px;
-                &:focus{
+
+            select {
+                float        : left;
+                font-size    : 12px;
+                width        : 58px;
+                height       : 56px;
+                border       : 2px solid rgba(255, 227, 36, 1);
+                border-radius: 0px 12px 12px 0px;
+
+                &:focus {
                     outline: none;
                 }
             }
         }
-        button{
-            width:59px;
-            font-size: 16px;
-            height:54px;
-            margin-top: 6px;
-            margin-right: 6px;
-            background:linear-gradient(360deg,rgba(204,102,204,1) 0%,rgba(255,204,204,1) 100%);
-            border-radius:18px;
-            color: white;
-            float: right;
+
+        button {
+            width        : 59px;
+            font-size    : 16px;
+            height       : 54px;
+            margin-top   : 6px;
+            margin-right : 6px;
+            background   : linear-gradient(360deg, rgba(204, 102, 204, 1) 0%, rgba(255, 204, 204, 1) 100%);
+            border-radius: 18px;
+            color        : white;
+            float        : right;
         }
+    }
+
+    /deep/.el-dialog {
+        width: 527px;
+
+        .el-dialog__header {
+            text-align: center;
+            background-image: linear-gradient(329deg,
+                    #cc66cc 0%,
+                    #ffcccc 100%);
+
+            span {
+                color: white;
+            }
+        }
+    }
+
+    /deep/.el-button--primary {
+        width : 355px;
+        height: 43px;
+        background-image: linear-gradient(329deg,
+                #cc66cc 0%,
+                #ffcccc 100%);
+        border       : none;
+        border-radius: 20px;
+        font-size    : 16px;
+        font-weight  : 800;
+    }
+
+    /deep/.el-dialog__headerbtn .el-dialog__close {
+        color    : white;
+        font-size: 16px;
+    }
+
+    .report_box {
+        margin-bottom: 12px;
+
+        p {
+            line-height: 36px;
+        }
+
+        .el-radio {
+            margin-bottom: 14px;
+        }
+
     }
 }

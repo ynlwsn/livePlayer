@@ -24,10 +24,10 @@
           <i class="el-icon-share"></i>
           <el-tooltip class="item" effect="light" placement="bottom-end">
             <div slot="content">
-              <img src="../../assets/wx01.png" alt="" @click="share" style="cursor: pointer;">
-              <img src="../../assets/icon-qq.png" alt="" @click="share" style="cursor: pointer;">
-              <img src="../../assets/icon_kj.png" alt="" @click="share" style="cursor: pointer;">
-              <img src="../../assets/icon-weibo.png" alt="" @click="share" style="cursor: pointer;">
+              <img src="../../assets/wx01.png" alt @click="share" style="cursor: pointer;" />
+              <img src="../../assets/icon-qq.png" alt @click="share" style="cursor: pointer;" />
+              <img src="../../assets/icon_kj.png" alt @click="share" style="cursor: pointer;" />
+              <img src="../../assets/icon-weibo.png" alt @click="share" style="cursor: pointer;" />
             </div>
             <!-- <el-button>下右</el-button> -->
             <span>分享</span>
@@ -35,7 +35,7 @@
         </div>
         <div class="operation_item">
           <i class="el-icon-warning-outline"></i>
-          <span @click="report">举报</span>
+          <span @click="dialogFormVisible = true">举报</span>
         </div>
       </div>
     </div>
@@ -49,11 +49,30 @@
     </div>
     <div class="gift">
       <div class="gift_box">
-        <ul ref="moreGift">
-          <li v-for="index in 100"></li>
+        <ul>
+          <li v-for="(item,index) in 9">{{index}}</li>
         </ul>
+        <i class="watchMore" :class="icon_row" @click="more"></i>
       </div>
-      <div class="watchMore" @click="more">></div>
+      <div class="gift_bag showMore" v-show="MoreGift">
+        <el-tabs v-model="activeName" @tab-click="handleClick">
+          <el-tab-pane label="普通" name="first">
+            <ul class="moreGifts">
+              <li v-for="(item,index) in 29">{{index}}</li>
+            </ul>
+          </el-tab-pane>
+          <el-tab-pane label="豪华" name="second">
+            <ul class="moreGifts">
+              <li v-for="(item,index) in 29">{{index}}</li>
+            </ul>
+          </el-tab-pane>
+          <el-tab-pane label="背包" name="third">
+            <ul class="moreGifts">
+              <li v-for="(item,index) in 29">{{index}}</li>
+            </ul>
+          </el-tab-pane>
+        </el-tabs>
+      </div>
       <div class="send_gift">
         <span>
           数
@@ -81,6 +100,56 @@
       <button>充值</button>
       <button>赠送</button>
     </div>
+    <!-- 举报 -->
+    <el-dialog title="举报" :visible.sync="dialogFormVisible">
+      <div class="report">
+        <div class="report_box">
+          <p>
+            <span style="color:#ff3399">*</span>举报原因：
+          </p>
+          <div>
+            <el-radio v-model="radio" label="1">骗取点击</el-radio>
+            <el-radio v-model="radio" label="2">低俗色情</el-radio>
+            <el-radio v-model="radio" label="3">侮辱谩骂</el-radio>
+            <el-radio v-model="radio" label="4">引人不适</el-radio>
+            <el-radio v-model="radio" label="5">盗用他人作品</el-radio>
+            <el-radio v-model="radio" label="6">任性抱打不平，就爱举报</el-radio>
+            <el-radio v-model="radio" label="7">
+              其他
+              <el-input v-model="input" placeholder="请输入内容"></el-input>
+            </el-radio>
+          </div>
+        </div>
+        <div class="report_box">
+          <p>
+            <span style="color:#ff3399">*</span>举报证据：
+          </p>
+          <el-upload
+            action="https://jsonplaceholder.typicode.com/posts/"
+            list-type="picture-card"
+            :on-preview="handlePictureCardPreview"
+            :on-remove="handleRemove"
+            :on-change="handleChange"
+            :class="{hide:hideUpload}"
+          >
+            <i class="el-icon-plus"></i>
+          </el-upload>
+          <el-dialog :visible.sync="dialogVisible">
+            <img width="100%" :src="dialogImageUrl" alt />
+          </el-dialog>
+          <p>选择一张系统截图作为证据或者上传自己的截图</p>
+        </div>
+        <div class="report_box">
+          <p>
+            <span style="color:#ff3399">*</span>举报说明：
+          </p>
+          <el-input type="textarea" :rows="2" placeholder="请输入内容" v-model="textarea"></el-input>
+        </div>
+      </div>
+      <div slot="footer" class="dialog-footer" style="textAlign:center">
+        <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -89,6 +158,17 @@ export default {
   name: "VideoBox",
   data() {
     return {
+      activeName: "second",
+      MoreGift: false,
+      radio: "1",
+      icon_row: "el-icon-arrow-up",
+      textarea: "",
+      hideUpload: false,
+      limitCount: 1,
+      dialogFormVisible: false,
+      dialogImageUrl: "",
+      dialogVisible: false,
+      input: "",
       playerOptions: {
         playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
         autoplay: false, //如果true,浏览器准备好时开始回放。
@@ -109,27 +189,54 @@ export default {
         // width: document.documentElement.clientWidth,
         notSupportedMessage: "此视频暂无法播放，请稍后再试", //允许覆盖Video.js无法播放媒体源时显示的默认信息。
         controls: false
-      },
-      ind: 0
+      }
     };
   },
   methods: {
     more() {
-      this.ind++;
-      this.$refs.moreGift.style.marginLeft = -(this.ind * 58) + "px";
+      if (this.MoreGift) {
+        this.MoreGift = false;
+        this.icon_row = "el-icon-arrow-up";
+      } else {
+        this.MoreGift = true;
+        this.icon_row = "el-icon-arrow-down";
+      }
     },
     changePersonal() {
       this.$router.push("/personal");
     },
-    share(){
-      console.log(1232)
+    // 分享
+    share() {
+      console.log(1232);
     },
-    report(){
-      
+    changeProduct(event) {
+      this.ProductActive = event.target.value; //获取option对应的value值
+      // console.log("你选中了", this.ProductActive);
+    },
+    handleRemove(file, fileList) {
+      console.log(file, fileList);
+      this.hideUpload = file.length >= this.limitCount;
+    },
+    handlePictureCardPreview(file) {
+      this.dialogImageUrl = file.url;
+      this.dialogVisible = true;
+      this.hideUpload = file.length >= this.limitCount;
+    },
+    handleChange(file, fileList) {
+      console.log(fileList);
+      this.hideUpload = fileList.length >= this.limitCount;
+    },
+    handleClick(tab, event) {
+      console.log(tab, event);
     }
   }
 };
 </script>
+<style>
+.hide .el-upload--picture-card {
+  display: none;
+}
+</style>
 <style scoped lang="less">
 @import "../css/videoBox.less";
 </style>  

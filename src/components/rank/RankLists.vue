@@ -3,12 +3,56 @@
     <SubTitle :title="titles" more="TOP20" icons="icon1"></SubTitle>
     <div class="rankBox">
       <div :class="bgColor" class="top3">
-      <ul class="title">
-        <li>日榜</li>
-        <li>周榜</li>
-        <li>月榜</li>
-      </ul>
-      <div class="showTop3"></div>
+        <ul class="title">
+          <li>日榜</li>
+          <li>周榜</li>
+          <li>月榜</li>
+        </ul>
+        <div class="showTop3">
+          <div class="top2">
+            <div class="avatar_box">
+              <img src="../../assets/icon-top2.png" alt class="bg" />
+              <img src="../../assets/avatar_test.png" alt class="avatars" />
+            </div>
+            <div class="xg_info">
+              <h5>小冷</h5>
+              <p>
+                <img src="../../assets/girl002.png" alt="">
+                <img src="../../assets/dj002.png" alt="">
+              </p>
+              <p>3423534星光</p>
+            </div>
+          </div>
+          <div class="top1">
+            <div class="avatar_box">
+              <img src="../../assets/icon-top1.png" alt class="bg" />
+              <img src="../../assets/avatar_test.png" alt class="avatars" />
+            </div>
+            <div class="xg_info">
+              <h5>小冷</h5>
+              <p>
+                <img src="../../assets/girl002.png" alt="">
+                <img src="../../assets/dj002.png" alt="">
+              </p>
+              <p>3423534星光</p>
+            </div>
+          </div>
+          <div class="top_3">
+            <div class="avatar_box">
+              <img src="../../assets/icon-top3.png" alt class="bg" />
+              <img src="../../assets/avatar_test.png" alt class="avatars" />
+            </div>
+            <div class="xg_info">
+              <h5>小冷</h5>
+              <p>
+                <img src="../../assets/girl002.png" alt="">
+                <img src="../../assets/dj002.png" alt="">
+              </p>
+              <p>3423534星光</p>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="rankMore">
         <ul>
@@ -33,16 +77,12 @@
 import SubTitle from "../Common/SubTitle";
 export default {
   name: "RankLists",
-  props: ["titles",'bgColor'],
+  props: ["titles", "bgColor"],
   data() {
-    return {
-      
-    };
+    return {};
   },
   components: { SubTitle },
-  watch: {
-   
-  }
+  watch: {}
 };
 </script>
 <style scoped lang="less">
@@ -81,9 +121,50 @@ export default {
         }
       }
     }
-    .top3{
+    .top1,
+    .top2,
+    .top_3 {
+      float: left;
+      .xg_info{
+          position: absolute;
+          left: -10px;
+          bottom: -64px;
+          h5{
+            height: 16px;
+          }
+          p{
+            height: 20px;
+            font-size: 12px;
+            img{
+              vertical-align: middle;
+            }
+            color: #666;
+          }
+        }
+    }
+    .top1 {
+      .avatar_box {
+        .bg {
+          height: 94px;
+          width: 168px;
+          left: -30px;
+          top: 0px;
+        }
+        .avatars{
+          height: 75px;
+          width: 75px;
+          left: -156px;
+          top: -3px;
+        }
+      }
+      .xg_info{
+          left: 12px;
+          bottom: -64px;
+        }
+    }
+    .top3 {
       width: 460px;
-      height: 213px;
+      height: 223px;
       border-radius: 6px 6px 0px 0px;
       background-size: cover;
       padding-top: 12px;
@@ -91,7 +172,68 @@ export default {
     .showTop3 {
       height: 165px;
       width: 460px;
-      
+      h5 {
+        text-align: center;
+      }
+      p {
+        height: 20px;
+        text-align: center;
+        img {
+          vertical-align: middle;
+        }
+      }
+      .top2 {
+        width: 20%;
+        margin-left: 100px;
+        margin-top: 20px;
+        .avatar_box {
+          height: 83px;
+          width: 73px;
+          img {
+            position: absolute;
+          }
+          .bg {
+            height: 83px;
+            width: 73px;
+          }
+          .avatars {
+            height: 58px;
+            width: 58px;
+            top: 22px;
+            left: 4px;
+          }
+        }
+        .xg_info{
+          left: -6px;
+          bottom: -68px;
+        }
+      }
+      .top_3{
+        position: absolute;
+        right: 66px;
+        top: 40px;
+        .avatar_box {
+          height: 83px;
+          width: 81px;
+          img {
+            position: absolute;
+          }
+          .bg {
+            height: 85px;
+            width: 81px;
+          }
+          .avatars {
+            height: 62px;
+            width: 62px;
+            top: 17px;
+            left: 3px;
+          }
+        }
+          .xg_info{
+          left: 0px;
+          bottom: -58px;
+        }
+      }
     }
     .bg_01 {
       background-image: url(../../assets/bg04.png);

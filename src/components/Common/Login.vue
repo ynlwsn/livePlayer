@@ -87,7 +87,7 @@ export default {
         .sendVcode{
             width:88px;
             height:22px;
-            border:1px solid rgba(112,112,112,0.33);
+            // border:1px solid rgba(112,112,112,0.33);
             border-radius:12px;
             color: rgba(255,51,153,1);
             background-color: #fff;

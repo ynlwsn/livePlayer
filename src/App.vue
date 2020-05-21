@@ -81,6 +81,9 @@ button{
     width: 100%;
     height: 100%;
   }
+  input:focus,select:focus{
+    outline: none;
+  }
 
 #app {
   margin-top:64px;
