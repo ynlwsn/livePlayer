@@ -4,13 +4,34 @@
     <div class="home_box">
       <div class="home_top3">
         <div class="top2">
-
+          <div class="img_box">
+            <img src="../../assets/avatar_test.png" alt="">
+            <img src="../../assets/home/bg_02.png" alt="">
+            <img src="../../assets/home/no2.png" alt="">
+            <img src="../../assets/home/sd_common.png" alt="">
+          </div>
+          <p class="jname">艺兴家族</p>
+          <p class="jbadge"><img src="../../assets/home/icon-jiazu.png" alt=""> <img src="../../assets/home/start.png" alt=""><img src="../../assets/home/start.png" alt=""></p>
         </div>
         <div class="top1">
-
+          <div class="img_box">
+            <img src="../../assets/avatar_test.png" alt="">
+            <img src="../../assets/home/bg_01.png" alt="">
+            <img src="../../assets/home/no1.png" alt="">
+            <img src="../../assets/home/sd_01.png" alt="">
+          </div>
+          <p class="jname">艺兴家族</p>
+          <p class="jbadge"><img src="../../assets/home/icon-jiazu.png" alt=""> <img src="../../assets/home/start.png" alt=""><img src="../../assets/home/start.png" alt=""></p>
         </div>
         <div class="top3">
-          
+          <div class="img_box">
+            <img src="../../assets/avatar_test.png" alt="">
+            <img src="../../assets/home/bg_03.png" alt="">
+            <img src="../../assets/home/no3.png" alt="">
+            <img src="../../assets/home/sd_common.png" alt="">
+          </div>
+          <p class="jname">艺兴家族</p>
+          <p class="jbadge"><img src="../../assets/home/icon-jiazu.png" alt=""> <img src="../../assets/home/start.png" alt=""><img src="../../assets/home/start.png" alt=""></p>
         </div>
       </div>
       <div class="home_top20">
@@ -139,6 +160,35 @@ export default {
     margin-bottom: 40px;
     .home_top3 {
       height: 184px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      p{
+        position: absolute;
+        color: #666;
+        font-size: 12px;
+        height: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .jname{
+        bottom: 8px;
+      }
+      .jbadge{
+        bottom: -18px;
+        img{
+          vertical-align: middle;
+        }
+      }
+      .top1{
+        .jname{
+        bottom: 12px;
+      }
+      .jbadge{
+        bottom: -20px;
+      }
+      }
     }
     /deep/.el-table th > .cell {
       text-align: center;
@@ -169,6 +219,53 @@ export default {
     // box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background: #fff;
+  }
+  .top1,.top2,.top3{
+    float: left;
+  }
+  .img_box{
+    position: relative;
+    height: 127px;
+    width: 190px;
+    img{
+      position: absolute;
+      left: 50%;
+        transform: translateX(-50%);
+      &:nth-of-type(1){
+        height: 84px;
+        width: 84px;
+        top: 23px;
+      }
+      &:nth-of-type(3){
+        top: -20px;
+      }
+      &:nth-of-type(2){
+        bottom: 8px;
+      }
+      &:nth-of-type(4){
+        bottom: 0;
+      }
+    }
+  }
+  .top1{
+    margin-top: -6px;
+   .img_box{
+    img{
+      &:nth-of-type(1){
+        height: 94px;
+        width: 94px;
+        top:8px;
+      }
+      &:nth-of-type(2){
+      }
+      &:nth-of-type(3){
+        top: -30px;
+      }
+      &:nth-of-type(4){
+        bottom: 0;
+      }
+    }
+  } 
   }
 }
 </style>

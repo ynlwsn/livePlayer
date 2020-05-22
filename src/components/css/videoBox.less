@@ -17,8 +17,8 @@
             width   : auto;
             height  : 73px;
             position: relative;
-            top     : 4px;
-
+            top     : 2px;
+            
             .ulogo {
                 height: 56px;
                 width : 56px;
@@ -28,10 +28,14 @@
                 height : 73px;
                 color  : white;
                 display: inline-block;
-
+                .zb_id{
+                    width: 160px;
+                    height: 40px;
+                    margin-top: 4px;
+                }
                 .identity_txt {
-                    display: inline-block;
-
+                    width: 70px;
+                    float: left;
                     p {
                         font-size: 12px;
                     }
@@ -46,7 +50,11 @@
                     color         : white;
                     font-size     : 12px;
                     vertical-align: top;
-                    margin-left   : 8px;
+                    margin-left   : 18px;
+                    margin-top: 10px;
+                    &:focus{
+                        outline: none;
+                    }
                 }
             }
 
@@ -54,7 +62,6 @@
                 width     : auto;
                 height    : 25px;
                 margin-top: 4px;
-
                 .tag {
                     width : auto;
                     height: 16px;
@@ -138,18 +145,6 @@
         /deep/.el-tab-pane{
             height: 128px;
         }
-        /deep/.el-tabs__header{
-            padding-left: 20px;
-        }
-        /deep/.el-tabs__item:hover{
-            color:#ff3399;
-        }
-        /deep/.el-tabs__item.is-active{
-            color:#ff3399;
-        }
-        /deep/.el-tabs__active-bar {
-            border-bottom: 2px solid #ff3399;
-          }
         .moreGifts {
             // background-color: pink;
             background-color: rgba(0,0,0,0);

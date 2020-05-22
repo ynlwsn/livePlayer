@@ -23,7 +23,8 @@
 export default {
   data() {
     return {
-      imageUrl: ""
+      imageUrl: "",
+      dialogVisible: false
     };
   },
   methods: {
@@ -41,7 +42,7 @@ export default {
         this.$message.error("上传头像图片大小不能超过 2MB!");
       }
       return isJPG && isLt2M;
-    }
+    },
   }
 };
 </script>

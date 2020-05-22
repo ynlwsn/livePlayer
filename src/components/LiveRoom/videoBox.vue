@@ -2,9 +2,26 @@
   <div class="video_box">
     <div class="video_header">
       <div class="zb_info">
-        <img src="../../assets/logo.png" alt class="ulogo" @click="changePersonal" />
+        <el-tooltip class="item" effect="light" placement="bottom-start">
+          <div slot="content" style="borderRadius:0.1rem;maxWidth:400px">
+            <p style="color:#666;minHeight:0.15rem;lineHeight:0.15rem">用户昵称：{{nickname}}</p>
+            <p style="color:#666;minHeight:0.15rem;lineHeight:0.15rem">我的昵称：{{myname}}</p>
+            <p style="color:#666;minHeight:0.2rem;lineHeight:0.2rem">
+              修改昵称：
+              <input type="text" placeholder="输入3-10个字符" style="minHeight:0.15rem;borderRadius:0.075rem;border:1px solid #eee">
+              <button style="color:white;background:#d03599;padding:0.025rem;borderRadius:6px;">确认</button>
+            </p>
+            <p style="color:#666;minHeight:0.15rem;lineHeight:0.15rem">我的签名：{{sign}}</p>
+            <p style="color:#666;minHeight:0.2rem;lineHeight:0.2rem">
+              修改签名：
+              <input type="text" placeholder="最多10个字符" style="minHeight:0.15rem;borderRadius:0.075rem;border:1px solid #eee">
+              <button style="color:white;background:#d03599;padding:0.025rem;borderRadius:6px;">确认</button>
+            </p>
+          </div>
+          <img src="../../assets/avatar_test.png" alt class="ulogo" @click="changePersonal" />
+        </el-tooltip>
         <div class="identity">
-          <div>
+          <div class="zb_id">
             <div class="identity_txt">
               <p>桃干干</p>
               <span>ID：34354</span>
@@ -158,6 +175,9 @@ export default {
   name: "VideoBox",
   data() {
     return {
+      nickname: "34546456",
+      myname: "nick",
+      sign: "带啥不焚枯食淡金风科技水电费圣诞节电饭锅电饭锅电饭锅",
       activeName: "second",
       MoreGift: false,
       radio: "1",

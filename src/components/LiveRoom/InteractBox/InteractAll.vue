@@ -43,8 +43,8 @@
           <Emoji></Emoji>
         </div>
         <img src="../../../assets/bq01.png" alt @click="showEmoji" style="cursor: pointer;"/>
-        <img src="../../../assets/money.png" alt style="marginLeft:-0.31rem" />
-        <img src="../../../assets/clear.png" alt class="clear" />
+        <img src="../../../assets/money.png" alt style="marginLeft:-0.31rem;cursor: pointer;" @click="redPacket"/>
+        <img src="../../../assets/clear.png" alt class="clear" style="cursor: pointer;"/>
       </div>
       <div class="second_row">
         <div class="chat_">
@@ -55,20 +55,29 @@
         <div class="send">发送</div>
       </div>
     </div>
+    <RedPacket v-if="show === 'redPacket'" @close ="close"></RedPacket>
+    <RedLists v-else-if="show ==='redLists'" @close_ ="close"></RedLists>
+    <div class="rotMoney" @click="redLists">
+        <img src="../../../assets/money.png" alt="">
+        </div>
   </div>
 </template>
 
 <script>
 import Emoji from "../../Common/Emoji";
+import RedPacket from '../redPacket/RedPacket'
+import RedLists from '../redPacket/RedLists'
+import RotPacket from '../redPacket/RotPacket'
 export default {
   name: "InteractAll",
   data() {
     return {
       checked: true,
-      emoji:false
+      emoji:false,
+      show:''
     };
   },
-  components: { Emoji },
+  components: { Emoji, RedPacket, RedLists, RotPacket},
   methods:{
     showEmoji(){
       if(this.emoji){
@@ -76,6 +85,20 @@ export default {
       }else{
         this.emoji = true
       }
+    },
+    redPacket(){
+      this.show = 'redPacket'
+    },
+    redLists(){
+      this.show = 'redLists'
+    },
+    close(val){
+      if(val){
+        this.show = '';
+      }
+    },
+    close_(val){
+      close()
     }
   }
 };
@@ -199,6 +222,27 @@ export default {
     position: absolute;
     top: -190px;
     left: 180px;
+  }
+  .rotMoney{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    cursor: pointer;
+    animation:mymove 2s infinite;
+    &:hover{
+      animation-play-state: paused;
+    }
+  }
+  @keyframes mymove {
+    0%{
+      transform: rotateZ(-45deg);
+    }
+    50%{
+      transform: rotateZ(45deg);
+    }
+    100%{
+      transform: rotateZ(-45deg);
+    }
   }
 }
 </style>

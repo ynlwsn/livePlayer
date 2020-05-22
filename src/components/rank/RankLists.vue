@@ -11,8 +11,8 @@
         <div class="showTop3">
           <div class="top2">
             <div class="avatar_box">
+              <img src="../../assets/avatar_test.png" alt class="avatars" />              
               <img src="../../assets/icon-top2.png" alt class="bg" />
-              <img src="../../assets/avatar_test.png" alt class="avatars" />
             </div>
             <div class="xg_info">
               <h5>小冷</h5>
@@ -53,7 +53,6 @@
             </div>
           </div>
         </div>
-      </div>
       <div class="rankMore">
         <ul>
           <li>
@@ -225,7 +224,7 @@ export default {
           .avatars {
             height: 62px;
             width: 62px;
-            top: 17px;
+            top: 18px;
             left: 3px;
           }
         }
@@ -245,7 +244,7 @@ export default {
     }
     .rankMore {
       width: 100%;
-      height: auto;
+      // height: auto;
       ul {
         padding: 0 18px;
         li {

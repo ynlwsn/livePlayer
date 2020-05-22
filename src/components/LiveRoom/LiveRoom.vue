@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import Tool from './tool'
-import VideoBox from './videoBox'
-import Interact from './Interact'
-import Audience from './Audience'
+// import Tool from './tool'
+// import VideoBox from './videoBox'
+// import Interact from './Interact'
+// import Audience from './Audience'
 export default {
   name:'LiveRoom',
   data(){
@@ -39,7 +39,12 @@ export default {
 
     }
   },
-  components:{Tool,VideoBox,Interact,Audience}
+  components:{
+    Tool:resolve => require(['./tool'],resolve),
+    VideoBox:resolve => require(['./videoBox'],resolve),
+    Interact:resolve => require(['./Interact'],resolve),
+    Audience:resolve => require(['./Audience'],resolve)
+    }
 }
 
 </script>

@@ -8,7 +8,7 @@
       </li>
       <li @mouseenter="show('ph')" @mouseleave="hidden('ph')">
         <div class="tool_item">
-          <img src="../../assets/ph.png" alt />
+          <img src="../../assets/icons/icon-paihang.png" alt />
           <p>排行</p>
         </div>
         <div class="ph_box" v-show="ph">
@@ -17,7 +17,7 @@
       </li>
       <li @mouseenter="show('gz')" @mouseleave="hidden('gz')">
         <div class="tool_item">
-          <img src="../../assets/gz.png" alt />
+          <img src="../../assets/icons/icon-guanzhu.png" alt />
           <p>关注</p>
         </div>
         <div class="gz_box" v-show="gz">
@@ -59,10 +59,120 @@
       </li>
       <li @mouseenter="show('zj')" @mouseleave="hidden('zj')">
         <div class="tool_item">
-          <img src="../../assets/icon-zuji.png" alt />
+          <img src="../../assets/icons/icon-zuji.png" alt />
           <p>足迹</p>
         </div>
         <div class="zj_box" v-show="zj">
+          <div class="today zj_content">
+            <i class="round_icon"></i>
+            <h5>今天</h5>
+            <ul>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px"/>
+                <div class="state">
+                    <p>  
+                        <span class="zb_name">这是谁</span>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                    </p>
+                    <p>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                        <span style="color:#ff3399">排行:100+</span>
+                        <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                    </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px"/>
+                <div class="state">
+                    <p>  
+                        <span class="zb_name">这是谁</span>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                    </p>
+                    <p>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                        <span style="color:#ff3399">排行:100+</span>
+                        <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                    </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px"/>
+                <div class="state">
+                    <p>  
+                        <span class="zb_name">这是谁</span>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                    </p>
+                    <p>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                        <span style="color:#ff3399">排行:100+</span>
+                        <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                    </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+            </ul>
+          </div>
+          <div class="before zj_content">
+             <i class="round_icon"></i>
+            <h5>更早</h5>
+            <ul>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px"/>
+                <div class="state">
+                    <p>  
+                        <span class="zb_name">这是谁</span>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                    </p>
+                    <p>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                        <span style="color:#ff3399">排行:100+</span>
+                        <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                    </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px"/>
+                <div class="state">
+                    <p>  
+                        <span class="zb_name">这是谁</span>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                    </p>
+                    <p>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                        <span style="color:#ff3399">排行:100+</span>
+                        <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                    </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px"/>
+                <div class="state">
+                    <p>  
+                        <span class="zb_name">这是谁</span>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                    </p>
+                    <p>
+                        <img src="../../assets/icon-jiazu.png" alt="">
+                        <span style="color:#ff3399">排行:100+</span>
+                        <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                    </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+            </ul> 
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="tool_item">
+          <img src="../../assets/icons/icon-PK.png" alt />
+          <p>PK</p>
+        </div>
+        <div class="pk_box" v-show="pk">
           <div class="today zj_content">
             <i class="round_icon"></i>
             <h5>今天</h5>
@@ -184,6 +294,7 @@ export default {
       'gz':false,
       'ph':false,
       input2:'',
+      'pk':false
     }
   },
   components:{
@@ -222,7 +333,7 @@ export default {
         default:
           break;
       }
-    }
+    },
   }
 };
 </script>

@@ -65,6 +65,19 @@
       </div>
     </div>
   </div>
+  <!-- <div class="online_pk">
+    <h2>当前在线主播</h2>
+    <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input2"></el-input>
+    <ul class="touch_item">
+      <li>
+        <img src="../../assets/avatar_test.png" alt="">
+        <div class="pk_info">
+
+        </div>
+        <button class="voice_btn">连麦中</button>
+      </li>
+    </ul>
+  </div> -->
 </template>
 
 <script>
@@ -73,6 +86,24 @@ export default {
 };
 </script>
 <style scoped lang="less">
+// .pk_online {
+//   width: 415px;
+//   height: 580px;
+//   background-color: #fff;
+//   .touch_item{
+//     li{
+//       width: 100%;
+//       height: 66px;
+//       img{
+//         width: 48px;
+//         height: 48px;
+//       }
+//       .pk_info{
+//         float: left;
+//       }
+//     }
+//   }
+// }
 .myrecharge {
   height: 944px;
   padding-top: 22px;
@@ -138,7 +169,7 @@ export default {
             display: block;
           }
           img{
-            
+
           }
         }
       }
