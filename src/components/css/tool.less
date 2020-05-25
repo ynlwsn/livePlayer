@@ -1,193 +1,370 @@
 .tool {
-    width: 67px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 105;
-    ul {
-      text-align: center;
-      li {
-        width: 67px;
-        height: 85px;
-        padding-top: 12px;
-        .tool_item {
-          width: 67px;
-          height: 85px;
-          padding-top: 12px;
-          border-bottom: 1px solid rgba(241, 182, 182, 0.53);
-          cursor: pointer;
-        }
-        .zj_box {
-          position: absolute;
-          overflow: auto;
-          right: -414px;
-          top: 10px;
-          z-index: 100;
-          width: 414px;
-          height: auto;
-          max-height: 672px;
-          border-radius: 8px;
-          background-color: #fff;
-          padding: 20px 10px 20px 20px;
-          display: block;
-          .zj_content {
-            width: 100%;
-            height:auto;
-            text-align: left;
-            border-left: 1px solid #ccc;
-            .round_icon {
-              display: inline-block;
-              height: 10px;
-              width: 10px;
-              border-radius: 100%;
-              background-color: #ccc;
-              position: absolute;
-              left: -5px;
-            }
-            h5 {
-              font-size: 14px;
-              position: relative;
-              top: -10px;
-              left: 10px;
-              color: rgba(102, 102, 102, 1);
-            }
-            ul{
-                height: auto;
-                margin-left: 10px;
-                 li {
-                  width: 100%;
-                  height: 70px;
-                  &:hover{
-                      background-color: #f0f2f3;
-                  }
-                .state{
-                    float: left;
-                    height: 66px;
-                    vertical-align: middle;
-                    p{
-                        font-size: 12px;
-                        color: #000;
-                        text-align: left;
-                        img{
-                            height: 16px;
-                            width: auto;
-                        }
-                        span{
-                            font-size: 12px;
-                        }
-                    }
-                    
-                    .zb_name{
-                        font-size: 16px;
-                    }
-                }
-                  .follow {
-                    float: right;
-                    margin-right: 26px;
-                    margin-top: 6px;
-                    width: 47px;
-                    height: 22px;
-                    background: linear-gradient(
-                      282deg,
-                      rgba(204, 102, 204, 1) 0%,
-                      rgba(255, 204, 204, 1) 100%
-                    );
-                    border-radius: 6px;
-                    color: white;
-                    outline: none;
-                    border: none;
-                  }
-                  img {
-                    height: 36px;
-                    width: 36px;
-                  }
-                }
-            }
-          }
-        }
-        .ph_box,.gz_box{
-          position: absolute;
-          overflow: auto;
-          right: -414px;
-          top: 10px;
-          z-index: 100;
-          width:414px;
-          height:758px;
-          background:rgba(255,255,255,1);
-          opacity:1;
-          border-radius:8px;
-        }
-        .gz_box{
-          padding:12px;
-          padding-left: 20px;
-          .search{
-            width: 380px;
-            input{
-              width: 340px;
-              height:40px;
-              background:rgba(238,238,238,1);
-              opacity:1;
-              border-radius:7px;
-              border: none;
-              &:focus{
-                outline: none;
-              }
-            }
-            i{
-              height: 20px;
-              width: 23px;
-              cursor: pointer;
-              position: relative;
-              right: 40px;
-              top: 3px;
-              display: inline-block;
-              background-size: cover;
-              background-image: url("../../assets/icon-search.png");
-            }
-          }
-          .gz_lists{
-            width: 100%;
-            margin-top: 20px;
-            li{
-              width: 100%;
-              height: 80px;
-            }
-          }
-          img{
-            float: left;
-          }
-          .kb_info{
-            float: left;
-            text-align: left;
-            margin-left: 20px;
-          }
-        }
-        
-        img {
-          height: 40px;
-          widows: 40px;
-          display: inline-block;
-        }
-        p {
-          color: white;
-          font-size: 12px;
+  width     : 67px;
+  height    : 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position  : fixed;
+  left      : 0;
+  top       : 0;
+  z-index   : 105;
+
+  ul {
+    text-align: center;
+
+    li {
+      width      : 67px;
+      height     : 85px;
+      padding-top: 12px;
+
+      .tool_item {
+        width        : 67px;
+        height       : 85px;
+        padding-top  : 12px;
+        border-bottom: 1px solid rgba(241, 182, 182, 0.53);
+        cursor       : pointer;
+        margin-top: 10px;
+        &:hover p{
+          color: #ff3399;
         }
       }
-    }
-    .before{
-        margin-top: 30px;
-    }
-    .toolBottom {
-      position: absolute;
-      width: 67px;
-      text-align: center;
-      bottom: 10px;
+
+      .zj_box {
+        position        : absolute;
+        overflow        : auto;
+        right           : -414px;
+        top             : 10px;
+        z-index         : 100;
+        width           : 414px;
+        height          : auto;
+        max-height      : 672px;
+        border-radius   : 8px;
+        background-color: #fff;
+        padding         : 20px 10px 20px 20px;
+        display         : block;
+
+        .zj_content {
+          width      : 100%;
+          height     : auto;
+          text-align : left;
+          border-left: 1px solid #ccc;
+
+          .round_icon {
+            display         : inline-block;
+            height          : 10px;
+            width           : 10px;
+            border-radius   : 100%;
+            background-color: #ccc;
+            position        : absolute;
+            left            : -5px;
+          }
+
+          h5 {
+            font-size: 14px;
+            position : relative;
+            top      : -10px;
+            left     : 10px;
+            color    : rgba(102, 102, 102, 1);
+          }
+
+          ul {
+            height     : auto;
+            margin-left: 10px;
+
+            li {
+              width : 100%;
+              height: 70px;
+
+              &:hover {
+                background-color: #f0f2f3;
+              }
+
+              .state {
+                float         : left;
+                height        : 66px;
+                vertical-align: middle;
+
+                p {
+                  font-size : 12px;
+                  color     : #000;
+                  text-align: left;
+
+                  img {
+                    height: 16px;
+                    width : auto;
+                  }
+
+                  span {
+                    font-size: 12px;
+                  }
+                }
+
+                .zb_name {
+                  font-size: 16px;
+                }
+              }
+
+              .follow {
+                float       : right;
+                margin-right: 26px;
+                margin-top  : 6px;
+                width       : 47px;
+                height      : 22px;
+                background  : linear-gradient(282deg,
+                    rgba(204, 102, 204, 1) 0%,
+                    rgba(255, 204, 204, 1) 100%);
+                border-radius: 6px;
+                color        : white;
+                outline      : none;
+                border       : none;
+              }
+
+              img {
+                height: 36px;
+                width : 36px;
+              }
+            }
+          }
+        }
+      }
+
+      .ph_box,
+      .gz_box {
+        position     : absolute;
+        overflow     : auto;
+        right        : -414px;
+        top          : 10px;
+        z-index      : 100;
+        width        : 414px;
+        height       : 758px;
+        background   : rgba(255, 255, 255, 1);
+        opacity      : 1;
+        border-radius: 8px;
+      }
+
+      .gz_box {
+        padding     : 12px;
+        padding-left: 20px;
+
+        .search {
+          width: 360px;
+          height: 40px;
+          border-radius: 20px;
+          overflow: hidden;
+          background   : rgba(238, 238, 238, 1);
+          padding: 0 10px;
+          padding-right: 0;
+          input {
+            width        : 320px;
+            height       : 40px;
+            background   : rgba(238, 238, 238, 1);
+            opacity      : 1;
+            border-radius: 7px;
+            border       : none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          i {
+            height          : 20px;
+            width           : 23px;
+            cursor          : pointer;
+            position        : relative;
+            right           : 20px;
+            top             : 3px;
+            display         : inline-block;
+            background-size : cover;
+            background-image: url("../../assets/icon-search.png");
+          }
+        }
+
+        .gz_lists {
+          width     : 100%;
+          margin-top: 20px;
+
+          li {
+            width : 100%;
+            height: 80px;
+          }
+        }
+
+        img {
+          float: left;
+        }
+
+        .kb_info {
+          float      : left;
+          text-align : left;
+          margin-left: 20px;
+        }
+      }
+
       img {
-        display: block;
-        width: 67px;
-        margin-bottom: 10px;
+        height : 40px;
+        widows : 40px;
+        display: inline-block;
+      }
+
+      p {
+        color    : white;
+        font-size: 12px;
       }
     }
   }
+
+  .before {
+    margin-top: 30px;
+  }
+
+  .toolBottom {
+    position  : absolute;
+    width     : 67px;
+    text-align: center;
+    bottom    : 10px;
+
+    img {
+      display      : block;
+      width        : 67px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .pk_box {
+    position        : absolute;
+    width           : 415px;
+    height          : 580px;
+    background-color: #fff;
+    left            : 64px;
+    top             : 0;
+
+    .pk_content {
+      width : 100%;
+      margin: 0 auto;
+
+      h4 {
+        height     : 54px;
+        line-height: 54px;
+        font-size  : 18px;
+        font-weight: 400;
+
+        i {
+          top  : 18px;
+          right: 10px;
+        }
+      }
+
+      .search_nick {
+        height       : 36px;
+        width        : 334px;
+        margin       : 0 auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+      }
+
+      /deep/.el-input__inner {
+        border-radius: 20px;
+      }
+
+      .zb_can_touch {
+        height  : 440px;
+        width: 100%;
+        overflow: auto;
+        &::-webkit-scrollbar{
+          height: 1px;
+          width: 10px;
+        }
+        &::-webkit-scrollbar-thumb{
+          border-radius: 10px;
+          background-color: #ccc;
+        }
+        &::-webkit-scrollbar-track{
+          border-radius: 10px;
+          background-color: #fff;
+        }
+        li {
+          padding: 10px 20px;
+          height : 66px;
+          width  : 100%;
+          .zb_photo {
+            float : left;
+            width : auto;
+            height: 48px;
+            width : 48px;
+          }
+
+          .zb_base_info {
+            float: left;
+          }
+
+          p {
+            color          : #666;
+            height         : 26px;
+            padding        : 2px 6px;
+            display        : flex;
+            justify-content: flex-start;
+            align-items    : center;
+
+            img {
+              height        : auto;
+              vertical-align: middle;
+              margin-right  : 4px;
+              margin-left   : 4px;
+            }
+
+            span {
+              color: #ff3399;
+            }
+          }
+
+          .get_touch {
+            float      : right;
+            width      : 58px;
+            height     : 28px;
+            line-height: 28px;
+            margin-top : 10px;
+            background-image: linear-gradient(282deg,
+                #cc66cc 0%,
+                #ffcccc 100%);
+            border-radius: 6px;
+            color        : white;
+          }
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+    }
+  }
+  .tool_icon{
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    background-size: cover;
+  }
+  .icon_ph{
+    background-image: url(../../assets/icons/icon-paihang.png);
+  }
+  .icon_gz{
+    background-image: url(../../assets/icons/icon-guanzhu.png);
+  }
+  .icon_zj{
+    background-image: url(../../assets/icons/icon-zuji.png);
+  }
+  .icon_pk{
+    background-image: url(../../assets/icons/icon-PK.png);
+  }
+  .icon_ph_actived{
+    background-image: url(../../assets/icons/icon-paihang-1.png);
+  }
+  .icon_pk_actived{
+    background-image: url(../../assets/icons/icon-PK-1.png);
+  }
+  .icon_gz_actived{
+    background-image: url(../../assets/icons/icon-guanzhu-1.png);
+  }
+  .icon_zj_actived{
+    background-image: url(../../assets/icons/icon-zuji-1.png);
+  }
+}

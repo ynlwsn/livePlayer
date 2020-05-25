@@ -3,7 +3,7 @@
     <div class="container">
       <div class="video_left">
         <div class="enter_room">
-          <router-link to='/live_room'>进入直播间</router-link>
+          <router-link to="/live_room">进入直播间</router-link>
         </div>
         <video-player
           class="video-player vjs-custom-skin"
@@ -11,38 +11,57 @@
           :playsinline="true"
           :options="playerOptions"
           @play="onPlayerPlay($event)"
-           @pause="onPlayerPause($event)"
+          @pause="onPlayerPause($event)"
         ></video-player>
         <div class="video_bar">
           <div class="playOrPause" @click="changeState">
-            <i :class="play" ></i>
+            <i :class="play"></i>
           </div>
           <div class="voice">
             <i :class="voice" @click="changeVoice"></i>
             <el-slider v-model="value1"></el-slider>
           </div>
-          <button class="seeMore" @click="enterLiveRoom">点我进入直播间</button>   
+          <button class="seeMore" @click="enterLiveRoom">点我进入直播间</button>
         </div>
       </div>
       <div class="video_right">
-        <div class="video_box"></div>
-        <div class="video_box"></div>
-        <div class="video_box"></div>
-        <div class="video_box"></div>
+        <div class="video_box" v-for="(item,index) in top4" :key="item.name + index">
+          <img :src="item.msg" alt />
+          <div class="intro_info">
+            <div class="petName">
+              <h5>{{item.type}}</h5>
+              <p>{{item.uname}}</p>
+            </div>
+            <div class="heat">
+              <i></i>
+              <span>{{item.attention}}</span>
+            </div>
+          </div>
+          <div class="join_mask">
+            <i class="el-icon-video-play"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import AnchorBox from "../Common/AnchorBox";
 export default {
   name: "TopRecommend",
   data() {
     return {
-      value1:30,
-      play:'video-play',
-      voice:'voice',
-      volume:30,
+      value1: 30,
+      play: "video-play",
+      voice: "voice",
+      volume: 30,//音量
+      top4: [
+        {msg:require('../../assets/test.jpg'),type:'可爱唱将',uname:'小可',attention:324234},
+        {msg:require('../../assets/test.jpg'),type:'可爱唱将',uname:'小可',attention:324234},
+        {msg:require('../../assets/test.jpg'),type:'可爱唱将',uname:'小可',attention:324234},
+        {msg:require('../../assets/test.jpg'),type:'可爱唱将',uname:'小可',attention:324234},
+        ],
       playerOptions: {
         playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
         autoplay: true, //如果true,浏览器准备好时开始回放。
@@ -63,48 +82,51 @@ export default {
         poster: "../../assets/downBg01.jpg", //你的封面地址
         // width: document.documentElement.clientWidth,
         notSupportedMessage: "此视频暂无法播放，请稍后再试", //允许覆盖Video.js无法播放媒体源时显示的默认信息。
-        controls:false
+        controls: false
       }
     };
   },
-  watch:{
+  components: {
+    AnchorBox
+  },
+  watch: {
     // 控制视频音量
-    value1(nval){
-      this.$refs.videoPlayer.player.volume(nval)
-      this.volume = nval
+    value1(nval) {
+      this.$refs.videoPlayer.player.volume(nval);
+      this.volume = nval;
     }
   },
   methods: {
     onPlayerPlay($event) {},
     onPlayerPause($event) {},
     // 播放暂停
-    changeState(){
-      if(this.play === 'video-play'){
-        this.play = 'video-pause'
-        this.$refs.videoPlayer.player.pause()
-      }else{
-        this.play = 'video-play'
-        this.$refs.videoPlayer.player.play()
+    changeState() {
+      if (this.play === "video-play") {
+        this.play = "video-pause";
+        this.$refs.videoPlayer.player.pause();
+      } else {
+        this.play = "video-play";
+        this.$refs.videoPlayer.player.play();
       }
     },
-    changeVoice(){
-       if(this.voice === 'voice'){
-        this.voice = 'silent'
-        this.$refs.videoPlayer.player.volume(0)
-        this.value1 = 0
-      }else{
-        this.voice = 'voice'
-        this.volume = 30
-        this.$refs.videoPlayer.player.volume(this.volume)
-        this.value1 = this.volume
+    changeVoice() {
+      if (this.voice === "voice") {
+        this.voice = "silent";
+        this.$refs.videoPlayer.player.volume(0);
+        this.value1 = 0;
+      } else {
+        this.voice = "voice";
+        this.volume = 30;
+        this.$refs.videoPlayer.player.volume(this.volume);
+        this.value1 = this.volume;
       }
     },
-    enterLiveRoom(){
-      this.$router.push('/live_room')
+    enterLiveRoom() {
+      this.$router.push("/live_room");
     }
   }
 };
 </script>
 <style scoped lang="less">
-@import '../css/recommend.less';
+@import "../css/recommend.less";
 </style>

@@ -60,8 +60,12 @@ export default {
   position: relative;
   font-family:Microsoft YaHei;
   box-sizing: border-box;
-  font-size: 14px;
 }
+// html,body{
+//   width: 100%;
+//   height: 100%;
+//   overflow-x: hidden;
+// }
 button{
   border:none;
   font-size: 14px;
@@ -77,17 +81,16 @@ button{
     text-decoration: none;
     color: #333;
   }
-  body,html{
-    width: 100%;
-    height: 100%;
-  }
   input:focus,select:focus{
     outline: none;
   }
-
+body{
+  min-width: 1920px;
+  overflow: auto;
+}
 #app {
+  width: 1920px;
   margin-top:64px;
-  width: 100%;
   background-color: #f0f2f3;
 }
 button{

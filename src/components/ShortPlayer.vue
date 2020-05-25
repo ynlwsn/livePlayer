@@ -4,7 +4,7 @@
       <div class="short_content" ref="short_content">
         <div class="banner"></div>
         <div class="all_video">
-          <SubTitle title="全部视频" more=""  icons='icon7'></SubTitle> 
+          <SubTitle title="全部视频" more=""  icons='icon5'></SubTitle> 
           <Player></Player>
         </div>
       </div>

@@ -65,9 +65,20 @@ export default {
         position: absolute;
         background-color: rgba(0,0,0,0.5);
         color: white;
+        display: none;
         i{
         font-size: 80px;
         font-weight: 200;
+        }
+      }
+      &:hover{
+        .join_mask{
+          display: block;
+          i{
+            &:hover{
+            color: #ff3399;
+            }
+          }
         }
       }
     }

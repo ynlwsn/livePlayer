@@ -13,7 +13,7 @@
           <router-link to="/short-player">短视频</router-link>
         </li>
         <li @mouseenter="showSelect" @mouseleave="hiddenSelect">
-          <div>排行<i class="el-icon-caret-bottom"></i></div>
+          <a style="cursor: pointer;">排行<i class="el-icon-caret-bottom"></i></a>
           <div class="rank_select" v-show="showMore">
             <router-link tag="p" to="/actual-rank/zbrank">实时排行榜</router-link>
             <router-link tag="p" to="/home-rank">家族排行榜</router-link>

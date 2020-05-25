@@ -35,7 +35,6 @@ export default {
         height:229px;
         border-radius:60px;
         margin-bottom: 20px;
-        
       }
       .intro_info{
               width:100%;

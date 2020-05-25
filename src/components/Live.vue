@@ -4,11 +4,11 @@
     <div class="live_content" ref = 'live_content'>
         <div class="banner"></div>
         <div class="choiceness">
-          <SubTitle title="六颜精选" more=""  icons='icon7'></SubTitle> 
+          <SubTitle title="六颜精选" more=""  icons='icon5'></SubTitle> 
           <Player></Player>
         </div>
         <div class="all_video">
-          <SubTitle title="全部视频" more=""  icons='icon7'></SubTitle> 
+          <SubTitle title="全部视频" more=""  icons='icon5'></SubTitle> 
           <Player></Player>
         </div>
     </div>
