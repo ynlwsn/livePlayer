@@ -70,6 +70,11 @@ export default {
         float: right;
         font-size: 16px;
         cursor: pointer;
+        a{
+            display: inline-block;
+            margin-top: 10px;
+            
+        }
     }
 }
 </style>

@@ -4,7 +4,7 @@
       <div class="person_aside">
         <div class="personal_info">
           <div class="base_info">
-            <img src="../assets/logo.png" alt />
+            <img src="../assets/avatar_test.png" alt />
             <div class="uname">
               <i></i>
               <span>小冷</span>
@@ -36,23 +36,14 @@
         <div class="guard">
           <h3>守护榜</h3>
           <ul class="top">
-            <li>
-              <div class="num">1</div>
-              <img src="../assets/logo.png" alt />
+            <li v-for="(attention, index) in attentionLists" :key="attention.u_name">
+              <div class="num">{{attention.id}}</div>
+              <img :src="attention.avatar" alt />
               <div class="name">
-                <p>小冷</p>
-                <p style="color:#666">1000星光</p>
+                <p>{{attention.u_name}}</p>
+                <p style="color:#666">{{attention.xg}}星光</p>
               </div>
-              <button class="attention">+ 关注</button>
-            </li>
-            <li>
-              <div class="num">1</div>
-              <img src="../assets/logo.png" alt />
-              <div class="name">
-                <p>小冷</p>
-                <p style="color:#666">1000星光</p>
-              </div>
-              <button class="attention attentioned">已关注</button>
+              <button class="attention" :class="attention.attentioned">{{attention.state}}</button>
             </li>
           </ul>
         </div>
@@ -70,7 +61,19 @@
 
 <script>
 export default {
-  name: "Personal"
+  name: "Personal",
+  data(){
+    return{
+      attentionLists:[
+        {id:1,avatar:require('../assets/avatar_test.png'),u_name:'小冷',xg:1000,attentioned:'attentioned',state:'已关注'},
+        {id:2,avatar:require('../assets/avatar_test.png'),u_name:'小冷',xg:1000,attentioned:'attentioned',state:'已关注'},
+        {id:3,avatar:require('../assets/avatar_test.png'),u_name:'小冷',xg:1000,attentioned:'attentioned',state:'已关注'},
+        {id:4,avatar:require('../assets/avatar_test.png'),u_name:'小冷',xg:1000,attentioned:'attentioned',state:'已关注'},
+        {id:5,avatar:require('../assets/avatar_test.png'),u_name:'小冷',xg:1000,attentioned:'attentioned',state:'已关注'},
+        {id:6,avatar:require('../assets/avatar_test.png'),u_name:'小冷',xg:1000,attentioned:'',state:'+ 关注'},
+      ]
+    }
+  }
 };
 </script>
 <style lang="less" scoped >

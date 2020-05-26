@@ -17,7 +17,8 @@ const Record = resolve => require(['@/components/Mine/Record'], resolve)
 const ZbRank = resolve => require(['@/components/rank/ZbRank'], resolve)
 const YhRank = resolve => require(['@/components/rank/YhRank'], resolve)
 const Family = resolve => require(['@/components/Family'], resolve)
-// const Pk = resolve => require(['@/components/LiveRoom/'], resolve)
+const NotFound = resolve => require(['@/components/Common/NotFound'], resolve)
+const NewsLists = resolve => require(['@/components/Common/NewsLists'], resolve)
 
 
 Vue.use(Router)
@@ -114,10 +115,18 @@ export default new Router({
       name: 'MyRecharge',
       component: MyRecharge,
     },
-    // {
-    //   path: '/pk',
-    //   name: 'Pk',
-    //   component: Pk,
-    // },
+    {
+      path: '/news_lists',
+      name: 'NewsLists',
+      component: NewsLists,
+    },
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound,
+    },
   ]
-})
+}
+)
+
+

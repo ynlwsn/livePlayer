@@ -3,7 +3,6 @@
     position  : absolute;
     left      : 102px;
     margin-top: 22px;
-
     .video_header {
         width        : 993px;
         height       : 73px;
@@ -12,29 +11,31 @@
         padding-left : 7px;
         padding-right: 17px;
         position     : relative;
-
         .zb_info {
             width   : auto;
             height  : 73px;
             position: relative;
-            top     : 2px;
-            
+            img{
+                cursor: pointer;
+            }
             .ulogo {
                 height: 56px;
                 width : 56px;
             }
-
             .identity {
                 height : 73px;
+                width: auto;
                 color  : white;
                 display: inline-block;
                 .zb_id{
-                    width: 160px;
+                    width: auto;
+                    min-width: 260px;
                     height: 40px;
                     margin-top: 4px;
+                    
                 }
                 .identity_txt {
-                    width: 70px;
+                    width: 150px;
                     float: left;
                     p {
                         font-size: 12px;
@@ -42,6 +43,8 @@
                 }
 
                 .identity_btn {
+                    position: absolute;
+                    right: 90px;
                     height        : 22px;
                     padding       : 0 4px;
                     line-height   : 22px;
@@ -68,14 +71,12 @@
                 }
             }
         }
-
         .operation {
             position   : absolute;
             right      : 0;
             top        : 0;
             height     : 73px;
             line-height: 73px;
-
             .operation_item {
                 cursor      : pointer;
                 display     : inline-block;
@@ -93,10 +94,109 @@
     .video_content {
         width           : 993px;
         background-color: #fff;
-
         .video-player {
             width: 993px;
         }
+        .video_bar {
+            width           : 100%;
+            height          : 50px;
+            line-height     : 50px;
+            position        : absolute;
+            bottom          : 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            vertical-align: middle;
+            /deep/.el-slider{
+                margin-top: 4px;
+            }
+            /deep/.el-slider__bar{
+                background-color: #ff3399;
+              }
+              /deep/.el-slider__button{
+                border:1px solid #ff3399;
+              }
+            .playOrPause {
+              float       : left;
+              height      : 50px;
+              line-height : 50px;
+              margin-right: 20px;
+              margin-left : 26px;      
+              i {
+                display        : inline-block;
+                height         : 24px;
+                width          : 24px;
+                position       : relative;
+                background-size: cover;
+                top            : 3px;
+              }
+      
+              .video-pause {
+                background-image: url(../../assets/icon-kaishi.png);
+              }
+      
+              .video-play {
+                background-image: url(../../assets/icon-zanting.png);
+              }
+            }
+      
+            .voice {
+              width          : 140px;
+              height         : 50px;
+              float          : left;
+              display        : flex;
+              justify-content: start;
+              align-items    : center;
+              i {
+                width          : 24px;
+                height         : 24px;
+                display        : inline-block;
+                background-size: cover;
+                position       : relative;
+                top            : -4px;
+                margin-right   : 10px;
+              }
+      
+              .voices {
+                background-image: url(../../assets/icon-shengyin.png);
+              }
+      
+              .silent {
+                background-image: url(../../assets/icon-jingyin.png);
+              }
+      
+              .el-slider {
+                width : 100px;
+                height: 50px;
+              }
+            }
+            .full_screen{
+                i{
+                    color: white;
+                    float: right;
+                    font-size: 20px;
+                    top: 10px;
+                    right: 10px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #ff3399;
+                    }
+                }
+            }
+            .seeMore {
+              float           : right;
+              margin-right    : 20px;
+              margin-top      : 10px;
+              width           : 160px;
+              height          : 26px;
+              border-radius   : 14px;
+              background-image: linear-gradient(to right, #FFCCCC, #CC66CC);
+              border          : none;
+              color           : white;
+      
+              &:hover {
+                color: #FF3399;
+              }
+            }
+          }
     }
 
     .gift {

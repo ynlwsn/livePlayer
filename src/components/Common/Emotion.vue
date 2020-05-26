@@ -18,9 +18,9 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style scoped lang="less">
 .ly-emotion {
-  display: inline-block
+  display: inline-block;
 }
 .ly-static-emotion {
   width: 24px;

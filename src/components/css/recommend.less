@@ -51,7 +51,15 @@
       position        : absolute;
       bottom          : 0;
       background-color: rgba(0, 0, 0, 0.5);
-
+      /deep/.el-slider{
+        margin-top: 4px;
+      }
+      /deep/.el-slider__bar{
+        background-color: #ff3399;
+      }
+      /deep/.el-slider__button{
+        border:1px solid #ff3399;
+      }
       .playOrPause {
         float       : left;
         height      : 50px;
@@ -76,15 +84,14 @@
           background-image: url(../../assets/icon-zanting.png);
         }
       }
-
-      .voice {
+      .voices {
         width          : 140px;
         height         : 50px;
+        line-height: 50px;
         float          : left;
         display        : flex;
         justify-content: start;
         align-items    : center;
-
         i {
           width          : 24px;
           height         : 24px;

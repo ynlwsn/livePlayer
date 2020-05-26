@@ -69,6 +69,7 @@ export default {
         i{
         font-size: 80px;
         font-weight: 200;
+        cursor: pointer;
         }
       }
       &:hover{
@@ -84,7 +85,8 @@ export default {
     }
     .intro_info {
       width: 100%;
-      height: 36px;
+      height: 44px;
+      
       background: linear-gradient(
         360deg,
         rgba(0, 0, 0, 0.56) 0%,
@@ -96,6 +98,7 @@ export default {
       padding: 0 12px;
       .petName {
         float: left;
+        padding-top: 2px;
         h5 {
           font-size: 14px;
           font-weight: 400;
@@ -106,8 +109,8 @@ export default {
       }
       .heat {
         float: right;
-        height: 36px;
-        line-height: 36px;
+        height: 44px;
+        line-height: 44px;
         i {
           height: 12px;
           width: 12px;

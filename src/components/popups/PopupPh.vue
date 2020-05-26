@@ -16,29 +16,7 @@
               <li>
                   <span>NO.1</span>
                   <div class="fans">
-                      <img src="../../assets/logo.png" alt="">
-                      <div class="fans_info">
-                          <p>木木</p>
-                          <i></i><i></i>
-                      </div>
-                  </div>
-                  <span style="color:rgba(255,204,0,1);">10000</span>
-              </li>
-              <li>
-                  <span>NO.1</span>
-                  <div class="fans">
-                      <img src="../../assets/logo.png" alt="">
-                      <div class="fans_info">
-                          <p>木木</p>
-                          <i></i><i></i>
-                      </div>
-                  </div>
-                  <span style="color:rgba(255,204,0,1);">10000</span>
-              </li>
-              <li>
-                  <span>NO.1</span>
-                  <div class="fans">
-                      <img src="../../assets/logo.png" alt="">
+                      <img src="../../assets/avatar_test.png" alt="">
                       <div class="fans_info">
                           <p>木木</p>
                           <i></i><i></i>

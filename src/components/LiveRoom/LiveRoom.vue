@@ -13,6 +13,7 @@
           <h3>猜你喜欢</h3>
           <ul>
             <li v-for="index in 6">
+                <img src="../../assets/test.jpg" alt="">
               <div class="intro_info">
                 <div class="petName">
                     <h5>可爱唱将</h5>
@@ -28,10 +29,6 @@
 </template>
 
 <script>
-// import Tool from './tool'
-// import VideoBox from './videoBox'
-// import Interact from './Interact'
-// import Audience from './Audience'
 export default {
   name:'LiveRoom',
   data(){

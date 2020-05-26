@@ -58,6 +58,7 @@ export default {
     overflow: hidden;
     overflow-y: auto;
     background-color: #fff;
+    z-index: 2000;
     &::-webkit-scrollbar {
                 height: 1px;
                 width : 10px;
@@ -75,6 +76,7 @@ export default {
   }
   .emotion-box-line {
     display: flex;
+    height: 30px;
   }
   .emotion-item {
     flex: 1;

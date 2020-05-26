@@ -15,10 +15,10 @@
                  <i class="header-icon icon_zh"></i>账户设置
             </template>
             <ul class="collapse_item">
-                <li @click="changeTab('基本资料')">基本资料</li>
-                <li @click="changeTab('修改头像')">修改头像</li>
-                <li @click="changeTab('修改密码')">修改密码</li>
-                <li @click="changeTab('我要认证')">我要认证</li>
+                <li @click="changeTab('基本资料')" :class="{'bg_pink':tab === '基本资料'}">基本资料</li>
+                <li @click="changeTab('修改头像')" :class="{'bg_pink':tab === '修改头像'}">修改头像</li>
+                <li @click="changeTab('修改密码')" :class="{'bg_pink':tab === '修改密码'}">修改密码</li>
+                <li @click="changeTab('我要认证')" :class="{'bg_pink':tab === '我要认证'}">我要认证</li>
             </ul>
           </el-collapse-item>
           <el-collapse-item name="2">
@@ -26,11 +26,11 @@
                  <i class="header-icon icon_social"></i>我的社交
             </template>
             <ul class="collapse_item">
-                <li @click="changeTab('我的关注')">我的关注</li>
-                <li @click="changeTab('我的粉丝')">我的粉丝</li>
-                <li @click="changeTab('我的黑名单')">我的黑名单</li>
-                <li @click="changeTab('我的管理员')">我的管理员</li>
-                <li @click="changeTab('我的直播')">我的直播</li>
+                <li @click="changeTab('我的关注')" :class="{'bg_pink':tab === '我的关注'}">我的关注</li>
+                <li @click="changeTab('我的粉丝')" :class="{'bg_pink':tab === '我的粉丝'}">我的粉丝</li>
+                <li @click="changeTab('我的黑名单')" :class="{'bg_pink':tab === '我的黑名单'}">我的黑名单</li>
+                <li @click="changeTab('我的管理员')" :class="{'bg_pink':tab === '我的管理员'}">我的管理员</li>
+                <li @click="changeTab('我的直播')" :class="{'bg_pink':tab === '我的直播'}">我的直播</li>
             </ul>
           </el-collapse-item>
         </el-collapse>

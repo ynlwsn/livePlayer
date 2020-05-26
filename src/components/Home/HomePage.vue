@@ -7,7 +7,7 @@
                 <AnchorBox :anchorLists = anchor1></AnchorBox>
             </div>
             <div class="liu_recommend">
-                <SubTitle title="在线直播" more="更多 >"  icons='icon2'></SubTitle>
+                <SubTitle title="在线直播" more="更多 >"  icons='icon2'  pathName="Live"></SubTitle>
                 <AnchorBox :anchorLists = anchor2></AnchorBox>
             </div>
             <div class="liu_recommend">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="news">
-                        <SubTitle title="最新消息" more="更多 >"  icons='icon4'></SubTitle>
+                        <SubTitle title="最新消息" more="更多 >"  icons='icon4' pathName="NewsLists"></SubTitle>
                         <News></News>
                     </div>
                 </div>

@@ -17,9 +17,9 @@
           <div class="playOrPause" @click="changeState">
             <i :class="play"></i>
           </div>
-          <div class="voice">
+          <div class="voices">
             <i :class="voice" @click="changeVoice"></i>
-            <el-slider v-model="value1"></el-slider>
+            <el-slider v-model="value1" :show-tooltip="false"></el-slider>
           </div>
           <button class="seeMore" @click="enterLiveRoom">点我进入直播间</button>
         </div>
@@ -52,10 +52,10 @@ export default {
   name: "TopRecommend",
   data() {
     return {
-      value1: 30,
+      value1: 100,
       play: "video-play",
       voice: "voice",
-      volume: 30,//音量
+      volume: 100,//音量
       top4: [
         {msg:require('../../assets/test.jpg'),type:'可爱唱将',uname:'小可',attention:324234},
         {msg:require('../../assets/test.jpg'),type:'可爱唱将',uname:'小可',attention:324234},

@@ -39,7 +39,7 @@
           <option value="zb">小冷</option>
         </select>
         <el-checkbox v-model="checked">私聊</el-checkbox>
-        <div class="emoji" v-show="emoji">
+        <div class="emoji" v-show="emoji" @mouseleave="emoji=false">
           <Emoji></Emoji>
         </div>
         <img src="../../../assets/bq01.png" alt @click="showEmoji" style="cursor: pointer;"/>
@@ -143,6 +143,8 @@ export default {
     min-height: 12%;
     border-top: 1px solid #ccc;
     padding-left: 22px;
+    height: 12%;
+    overflow: auto;
     div {
       float: left;
       margin-right: 12px;
@@ -152,8 +154,7 @@ export default {
       }
     }
     .say_content {
-      height: 26px;
-      line-height: 26px;
+      min-height: 26px;
       border-bottom: 1px solid #ccc;
     }
   }
@@ -169,6 +170,8 @@ export default {
       align-items: center;
     }
     .first_row {
+      height: 66px;
+      line-height: 66px;
       select {
         background-color: #ccc;
         border-radius: 10px;

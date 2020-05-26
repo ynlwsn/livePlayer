@@ -27,6 +27,16 @@ Vue.use(VideoPlayer);
 router.afterEach((to,from,next) =>{
   window.scrollTo(0,0)
 })
+// 404跳转配置
+router.beforeEach((to,from,next)=>{
+  if(to.matched.length === 0){
+    from.name ? next({
+      name:from.name
+    }):next('/404')
+  }else{
+    next()
+  }
+})
 new Vue({
   el: '#app',
   router,

@@ -9,10 +9,7 @@
                 <h4>全部分类</h4>
             </div>
             <div class="classify_item">
-                 <button>热门</button>
-                 <button>热门</button><button>热门</button><button>热门</button><button>热门</button>
-                 <button>热门</button>
-                 <button>热门</button><button>热门</button><button>热门</button><button>热门</button>
+                 <button v-for="(btn,index) in btnLists" :key="btn">{{btn}}</button>
             </div>
         </div>
     </div>
@@ -30,7 +27,8 @@ export default {
   data() {
     return {
         isOn : false,
-        input1:''
+        input1:'',
+        btnLists:['热门','女神','男神','校园','户外' ]
     };
   },
   methods: {

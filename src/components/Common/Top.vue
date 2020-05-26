@@ -86,7 +86,7 @@ export default {
   data() {
     return {
       Dialog:false,
-      mine: require("../../assets/logo.png"),
+      mine: require("../../assets/avatar_test.png"),
       input: "",
       current: "0",
       showHistory: false,

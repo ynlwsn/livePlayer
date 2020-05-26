@@ -63,6 +63,18 @@
         :playsinline="true"
         :options="playerOptions"
       ></video-player>
+      <div class="video_bar">
+          <div class="playOrPause" @click="changeState">
+            <i :class="play"></i>
+          </div>
+          <div class="voice">
+            <i :class="voice" @click="changeVoice"></i>
+            <el-slider v-model="volume" :show-tooltip="false"></el-slider>
+          </div>
+          <div class="full_screen">
+            <i class="el-icon-full-screen"@click="fullScreen"></i>
+          </div>
+        </div>
     </div>
     <div class="gift">
       <div class="gift_box">
@@ -175,6 +187,9 @@ export default {
   name: "VideoBox",
   data() {
     return {
+      play: "video-play",
+      voice: "voices",
+      volume:100,
       nickname: "34546456",
       myname: "nick",
       sign: "带啥不焚枯食淡金风科技水电费圣诞节电饭锅电饭锅电饭锅",
@@ -191,7 +206,7 @@ export default {
       input: "",
       playerOptions: {
         playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
-        autoplay: false, //如果true,浏览器准备好时开始回放。
+        autoplay: true, //如果true,浏览器准备好时开始回放。
         muted: false, // 默认情况下将会消除任何音频。
         loop: false, // 导致视频一结束就重新开始。
         preload: "auto", // 建议浏览器在<video>加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）
@@ -231,7 +246,6 @@ export default {
     },
     changeProduct(event) {
       this.ProductActive = event.target.value; //获取option对应的value值
-      // console.log("你选中了", this.ProductActive);
     },
     handleRemove(file, fileList) {
       console.log(file, fileList);
@@ -243,11 +257,34 @@ export default {
       this.hideUpload = file.length >= this.limitCount;
     },
     handleChange(file, fileList) {
-      console.log(fileList);
       this.hideUpload = fileList.length >= this.limitCount;
     },
     handleClick(tab, event) {
       console.log(tab, event);
+    },
+    changeState() {
+      if (this.play === "video-play") {
+        this.play = "video-pause";
+        this.$refs.videoPlayer.player.pause();
+      } else {
+        this.play = "video-play";
+        this.$refs.videoPlayer.player.play();
+      }
+    },
+    changeVoice() {
+      if (this.voice === "voices") {
+        this.voice = "silent";
+        this.$refs.videoPlayer.player.volume(0);
+        this.value1 = 0;
+      } else {
+        this.voice = "voices";
+        this.volume = 30;
+        this.$refs.videoPlayer.player.volume(this.volume);
+        this.value1 = this.volume;
+      }
+    },
+    fullScreen(){
+      this.$refs.videoPlayer.player.requestFullscreen()
     }
   }
 };
