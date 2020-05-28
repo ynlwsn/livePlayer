@@ -5,7 +5,7 @@
         <div class="banner"></div>
         <div class="all_video">
           <SubTitle title="全部视频" more=""  icons='icon5'></SubTitle> 
-          <Player></Player>
+          <AnchorBox :anchorLists = shortVideos></AnchorBox>
         </div>
       </div>
   </div>
@@ -13,12 +13,22 @@
 
 <script>
 import Aside from './Common/Aside'
-import Player from './Common/Player'
+import AnchorBox from './Common/AnchorBox'
 import SubTitle from './Common/SubTitle'
 export default {
     data(){
         return{
-            shortAsideMes:''
+            shortAsideMes:'',
+            shortVideos:[
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:1},
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:12},
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:123},
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:14},
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:15},
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:126},
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:17},
+              {img:require('../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:14},
+            ]
         }
     },
     watch:{
@@ -36,14 +46,14 @@ export default {
     }
   },
     components:{
-        Player,Aside,SubTitle
+        AnchorBox,Aside,SubTitle
     }
 }
 
 </script>
 <style scoped lang="less">
 .short_player{
-    height: 1080px;
+    min-height: 1080px;
     width: 100%;
     background-color: #f0f2f3;
     .banner{

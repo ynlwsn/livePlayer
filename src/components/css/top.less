@@ -1,11 +1,11 @@
 .top-nav {
-    width: 1920px;
+    width: 100%;
     height: 64px;
     background-color: white;
     position: fixed;
-    z-index: 1000;
     top: 0;
     left: 0;
+    z-index: 1000;
     .logo {
       height: 44px;
       width: 54px;
@@ -137,7 +137,7 @@
                 height: 57px;
                 width: 100%;
                 &:hover{
-                    background-color: #ccc;
+                    background-color: #f3efef;
                 }
                 img,
                 .vname,
@@ -228,6 +228,107 @@
           float: right;
           margin-top: 5px;
           cursor: pointer;
+        }
+        .top_right_img{
+          height: 500px;
+          width: auto;
+        }
+        .ownCenter{
+          position: absolute;
+          top: 60px;
+          right: -24px;
+          background-color: #fff;
+          border-radius: 4px;
+          .own_box{
+            width: 330px;
+            height: 432px;
+            .own_top{
+              height: 234px;
+              text-align: center;
+              background-image: url(../../assets/u_photo/yhbeijing.png);
+              background-size: cover;
+              color: white;
+              img{
+                height: 86px;
+                width: 86px;
+                position: relative;
+                top: 40px;
+              }
+              h3{
+                height: 24px;
+              }
+              p{
+                height: 22px;
+                span{
+                  color: #ff3399;
+                }
+                i{
+                  height: 12px;
+                  width: 26px;
+                  display: inline-block;
+                  position: relative;
+                  background-size: cover;
+                  z-index: 1000;
+                  margin-right: 4px;
+                }
+                .dj{
+                  background-image: url(../../assets/icon-dengji.png);
+                }
+              }
+            }
+            .own_content{
+              height: 199px;
+              display: flex;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+              flex-wrap: wrap;
+              div{
+                width: 35%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                p{
+                  display: inline-block;
+                  cursor: pointer;
+                }
+                i{
+                  height: 15px;
+                  width: 15px;
+                  display: inline-block;
+                  position: relative;
+                  background-size: cover;
+                  top: 2px;
+                  margin-right: 6px;
+                }
+                .i_live{
+                  background-image: url(../../assets/u_photo/icon-zhibo.png);
+                }
+                .i_own{
+                  background-image: url(../../assets/u_photo/icon-zhjuye.png);
+                }
+                .i_recharge{
+                  background-image: url(../../assets/u_photo/icon-chongzhi.png);
+                }
+                .i_rich{
+                  background-image: url(../../assets/u_photo/icon-zichan.png);
+                }
+                .i_rc{
+                  background-image: url(../../assets/u_photo/icon-fangguan.png);
+                }
+                .i_home{
+                  background-image: url(../../assets/u_photo/icon-jioazu.png);
+                }
+                .i_fouce{
+                  background-image: url(../../assets/u_photo/icon-guanzhu.png);
+                }
+                .i_fans{
+                  background-image: url(../../assets/u_photo/icon-fensi.png);
+                }
+        
+              }
+            }
+          }
         }
       }
     }

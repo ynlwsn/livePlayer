@@ -53,6 +53,7 @@ export default {
       }
     }
     .ph_content {
+      padding:0 12px;
       .col_name {
         width: 382px;
         height: 26px;
@@ -78,11 +79,10 @@ export default {
           ul{
               padding:0 12px;
               margin:0 auto;
-              width: 90%;
               li{
                   display: flex;
                   height: 64px;
-                  justify-content: space-between;
+                  justify-content: space-around;
                   align-items: center;
                   .fans{
                       img{

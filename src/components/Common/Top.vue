@@ -46,36 +46,32 @@
                 </div>
                 <button class="follow">关注</button>
               </li>
-              <li>
-                <img src="../../assets/money/icon-qiang.png" alt />
-                <div class="vname">
-                  <span>123</span>
-                  <i></i>
-                </div>
-                <div class="state">
-                  <span>直播中</span>
-                  <i></i>
-                </div>
-                <button class="follow">关注</button>
-              </li>
-              <li>
-                <img src="../../assets/money/icon-qiang.png" alt />
-                <div class="vname">
-                  <span>123</span>
-                  <i></i>
-                </div>
-                <div class="state">
-                  <span>直播中</span>
-                  <i></i>
-                </div>
-                <button class="follow">关注</button>
-              </li>
             </ul>
           </div>
         </div>
         <el-button class="register" @click="showDialog('register')">注册</el-button>
         <el-button class="login" @click="showDialog('login')">登陆</el-button>
-        <img :src="mine" alt class="mine_img" @click="personalCenter"/>
+          <img :src="mine" alt class="mine_img" @click="personalCenter" @mouseenter="showOwn"/>
+          <div class="ownCenter" v-show="ownCenter">
+            <div class="own_box" @mouseleave="hiddenOwn">
+              <div class="own_top">
+                <img src="../../assets/avatar_test.png" alt="">
+                <h3>逃赶赶</h3>
+                <p>(ID:234732984)</p>
+                <p><i class="dj"></i><span>排行：100+</span></p>
+              </div>
+              <div class="own_content">
+                <div><i class="i_live"></i><p>直播房间</p></div>
+                <div><i class="i_own"></i><p>个人主页</p></div>
+                <div><i class="i_recharge"></i><p>充值商城</p></div>
+                <div><i class="i_rich"></i><p>账户资产</p></div>
+                <div><i class="i_rc"></i><p>我的房管</p></div>
+                <div><i class="i_home"></i><p>我的家族</p></div>
+                <div><i class="i_fouce"></i><p>关注的人</p></div>
+                <div><i class="i_fans"></i><p>粉丝守护</p></div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -91,7 +87,8 @@ export default {
       current: "0",
       showHistory: false,
       showMore:false,
-      signIn:''
+      signIn:'',
+      ownCenter:false
     };
   },
   components:{
@@ -120,6 +117,12 @@ export default {
     },
     hiddenSelect(){
       this.showMore = false
+    },
+    showOwn(){
+      this.ownCenter = true
+    },
+    hiddenOwn(){
+      this.ownCenter = false
     }
   }
 };

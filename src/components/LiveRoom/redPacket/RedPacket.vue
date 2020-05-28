@@ -18,7 +18,8 @@
     </div>
     <el-input
       type="textarea"
-      :autosize="{ minRows: 2, maxRows: 4}"
+      rows="2"
+      resize="none"
       placeholder="请输入内容"
       v-model="textarea2"
     ></el-input>

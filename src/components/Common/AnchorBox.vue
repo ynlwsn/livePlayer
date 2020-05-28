@@ -1,20 +1,20 @@
 <template>
   <div class="anchor">
     <ul class="live_box">
-      <li v-for="anchorList in anchorLists">
-        <img src="../../assets/test.jpg" alt />
+      <li v-for="anchorList in anchorLists" :key="anchorLists.id">
+        <img :src="anchorList.img" alt />
         <div class="intro_info">
           <div class="petName">
-            <h5>可爱唱将</h5>
-            <p>小可</p>
+            <h5>{{anchorList.type}}</h5>
+            <p>{{anchorList.name}}</p>
           </div>
           <div class="heat">
             <i></i>
-            <span>3243254</span>
+            <span>{{anchorList.hot}}</span>
           </div>
         </div>
         <div class="join_mask">
-          <i class="el-icon-video-play"></i>
+          <i class="el-icon-video-play" @click="joinRoom(anchorList.id)"></i>
         </div>
       </li>
     </ul>
@@ -30,7 +30,11 @@ export default {
       current: ""
     };
   },
-  methods: {}
+  methods: {
+    joinRoom(id){
+      this.$router.push({path:`/short-player/${id}`});
+    }
+  }
 };
 </script>
 <style scoped lang="less">
@@ -41,7 +45,7 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-
+    margin:0 auto;
     img {
       width: 271px;
       height: 229px;
@@ -52,9 +56,6 @@ export default {
       border-radius: 60px;
       margin-bottom: 20px;
       position: relative;
-      &:hover {
-        border: 2px solid yellowgreen;
-      }
       .join_mask{
         height: 100%;
         width: 100%;
@@ -77,7 +78,7 @@ export default {
           display: block;
           i{
             &:hover{
-            color: #ff3399;
+            color: pink;
             }
           }
         }

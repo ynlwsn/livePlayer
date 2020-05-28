@@ -4,11 +4,11 @@
         <div class="container">
             <div class="liu_recommend">
                 <SubTitle title="六颜推荐" more="" icons='icon1'></SubTitle>
-                <AnchorBox :anchorLists = anchor1></AnchorBox>
+                <AnchorBox :anchorLists = list1></AnchorBox>
             </div>
             <div class="liu_recommend">
                 <SubTitle title="在线直播" more="更多 >"  icons='icon2'  pathName="Live"></SubTitle>
-                <AnchorBox :anchorLists = anchor2></AnchorBox>
+                <AnchorBox :anchorLists = list2></AnchorBox>
             </div>
             <div class="liu_recommend">
                 <div class="activity">
@@ -39,7 +39,7 @@
             <div class="recharge"></div>
             <div class="liu_recommend">
                 <SubTitle title="短视频" more="更多 >"  icons='icon5'></SubTitle>
-                <AnchorBox :anchorLists = anchor3></AnchorBox>
+                <AnchorBox :anchorLists = list3></AnchorBox>
             </div>
             <div class="example">
                 <div class="hot">
@@ -48,7 +48,7 @@
                         <ul class="hot">
                             <li>
                                 <i class="badge"></i>
-                                <img src="../../assets/logo.png" alt="">
+                                <img src="../../assets/avatar_test.png" alt="">
                                 <div class="uname">
                                     <p>小冷</p>
                                     <p>高颜值主播等你来</p>
@@ -70,7 +70,7 @@
                             <li>
                                 <div class="num">NO.1</div>
                                 <i class="badge top3-badge"></i>
-                                <img src="../../assets/logo.png" alt="">
+                                <img src="../../assets/avatar_test.png" alt="">
                                 <div class="uname">
                                     <p>小冷</p>
                                     <p>高颜值主播等你来</p>
@@ -92,7 +92,7 @@
                             <li>
                                 <div class="num">NO.1</div>
                                 <i class="badge top3-badge"></i>
-                                <img src="../../assets/logo.png" alt="">
+                                <img src="../../assets//avatar_test.png" alt="">
                                 <div class="uname">
                                     <p>小冷</p>
                                     <p>高颜值主播等你来</p>
@@ -117,9 +117,27 @@ import FloatWin from './FloatWin'
 export default {
     data(){
         return{
-            anchor1:5,
-            anchor2:10,
-            anchor3:10,
+            list1:[
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:1},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:12},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:123},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:14},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:15},
+            ],
+            list2:[
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:1},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:12},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:123},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:14},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:15},
+            ],
+            list3:[
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:1},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:12},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:123},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:14},
+              {img:require('../../assets/tj.png'),type:'可爱唱将',name:'mumu',hot:3243,id:15},
+            ],
             imgLists:[
                 {'url':require('../../assets/tj.png')},
                 {'url':require('../../assets/tj.png')},

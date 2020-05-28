@@ -19,10 +19,11 @@ const YhRank = resolve => require(['@/components/rank/YhRank'], resolve)
 const Family = resolve => require(['@/components/Family'], resolve)
 const NotFound = resolve => require(['@/components/Common/NotFound'], resolve)
 const NewsLists = resolve => require(['@/components/Common/NewsLists'], resolve)
+const RealName = resolve => require(['@/components/RealName'], resolve)
+const VideoRoom = resolve => require(['@/components/VideoRoom'], resolve)
 
 
 Vue.use(Router)
-
 export default new Router({
   routes: [
     { path: '/', redirect: { name: 'HomePage' } },
@@ -45,6 +46,11 @@ export default new Router({
       path: '/short-player',
       name: 'ShortPlayer',
       component: ShortPlayer
+    },
+    {
+      path: '/short-player/:id',
+      name: 'VideoRoom',
+      component: VideoRoom
     },
     {
       path: '/home-rank',
@@ -119,6 +125,11 @@ export default new Router({
       path: '/news_lists',
       name: 'NewsLists',
       component: NewsLists,
+    },
+    {
+      path: '/real_name',
+      name: 'RealName',
+      component: RealName,
     },
     {
       path: '*',

@@ -1,15 +1,15 @@
 <template>
   <div class="live">
     <Aside class="aside" @turnOn="asideMes"></Aside>
-    <div class="live_content" ref = 'live_content'>
+    <div class="live_content" ref ='live_content'>
         <div class="banner"></div>
         <div class="choiceness">
           <SubTitle title="六颜精选" more=""  icons='icon5'></SubTitle> 
-          <Player></Player>
+          <AnchorBox  :anchorLists = anchor2 ></AnchorBox>
         </div>
         <div class="all_video">
           <SubTitle title="全部视频" more=""  icons='icon5'></SubTitle> 
-          <Player></Player>
+          <AnchorBox  :anchorLists = anchor3 ></AnchorBox>
         </div>
     </div>
   </div>
@@ -17,12 +17,14 @@
 
 <script>
 import Aside from './Common/Aside'
-import Player from './Common/Player'
 import SubTitle from './Common/SubTitle'
+import AnchorBox from './Common/AnchorBox'
 export default {
     name:'Live',
   data () {
       return {
+        anchor2:10,
+        anchor3:10,
         asideMessage:''
       }
     },
@@ -41,7 +43,7 @@ export default {
     }
   },
   components: {
-    Aside,Player,SubTitle
+    Aside,SubTitle,AnchorBox
   }
 };
 </script>
@@ -52,6 +54,7 @@ export default {
     overflow: auto;
     background-color: #f0f2f3;
     margin:0 auto;
+    margin-top: 64px;
     display: flex;
     justify-content: start;
     .infinite-list{

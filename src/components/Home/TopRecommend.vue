@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="video_right">
-        <div class="video_box" v-for="(item,index) in top4" :key="item.name + index">
+        <div class="video_box" v-for="(item,index) in top4" :key="item.msg + index">
           <img :src="item.msg" alt />
           <div class="intro_info">
             <div class="petName">

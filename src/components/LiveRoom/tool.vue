@@ -82,6 +82,111 @@
                 </div>
                 <button class="follow">关注</button>
               </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px" />
+                <div class="state">
+                  <p>
+                    <span class="zb_name">这是谁</span>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                  </p>
+                  <p>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                    <span style="color:#ff3399">排行:100+</span>
+                    <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                  </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px" />
+                <div class="state">
+                  <p>
+                    <span class="zb_name">这是谁</span>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                  </p>
+                  <p>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                    <span style="color:#ff3399">排行:100+</span>
+                    <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                  </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px" />
+                <div class="state">
+                  <p>
+                    <span class="zb_name">这是谁</span>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                  </p>
+                  <p>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                    <span style="color:#ff3399">排行:100+</span>
+                    <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                  </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px" />
+                <div class="state">
+                  <p>
+                    <span class="zb_name">这是谁</span>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                  </p>
+                  <p>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                    <span style="color:#ff3399">排行:100+</span>
+                    <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                  </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px" />
+                <div class="state">
+                  <p>
+                    <span class="zb_name">这是谁</span>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                  </p>
+                  <p>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                    <span style="color:#ff3399">排行:100+</span>
+                    <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                  </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px" />
+                <div class="state">
+                  <p>
+                    <span class="zb_name">这是谁</span>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                  </p>
+                  <p>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                    <span style="color:#ff3399">排行:100+</span>
+                    <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                  </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
+              <li>
+                <img src="../../assets/money/icon-qiang.png" alt style="float:left;marginRight:4px" />
+                <div class="state">
+                  <p>
+                    <span class="zb_name">这是谁</span>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                  </p>
+                  <p>
+                    <img src="../../assets/icon-jiazu.png" alt />
+                    <span style="color:#ff3399">排行:100+</span>
+                    <span style="color:#color:rgba(51,51,51,1);">直播中</span>
+                  </p>
+                </div>
+                <button class="follow">关注</button>
+              </li>
             </ul>
           </div>
         </div>

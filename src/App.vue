@@ -61,11 +61,10 @@ export default {
   font-family:Microsoft YaHei;
   box-sizing: border-box;
 }
-// html,body{
-//   width: 100%;
-//   height: 100%;
-//   overflow-x: hidden;
-// }
+html,body{
+  width: 100%;
+  height: 100%;
+}
 button{
   border:none;
   font-size: 14px;
@@ -84,13 +83,9 @@ button{
   input:focus,select:focus{
     outline: none;
   }
-body{
-  min-width: 1920px;
-  overflow: auto;
-}
 #app {
   width: 1920px;
-  margin-top:64px;
+  overflow: auto;
   background-color: #f0f2f3;
 }
 button{
